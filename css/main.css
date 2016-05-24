@@ -1,0 +1,113 @@
+@charset "UTF-8";
+/* CSS Document */
+body {
+	margin:0;
+}
+@font-face {
+	font-family:Trajan Pro;
+	src:url(/css/fonts/trajan_pro/TrajanPro-Regular.ttf);
+}
+@font-face {
+	font-family:Helvetica Neue Light;
+	src:url(/css/fonts/helvetica_neue/HelveticaNeue-Light.ttf);
+}
+@font-face {
+	font-family:BankGothicBT Light;
+	src:url(/css/fonts/BankGothicBT_Light/BankGothicBT_Light.ttf),
+	    url(/css/fonts/BankGothicBT_Light/BankGothicBT_Light.woff),
+		url(/css/fonts/BankGothicBT_Light/BankGothicBT_Light.svg);
+}
+#contenedor {
+	position:relative;
+	width:1280px;
+	height:auto;
+	margin:auto;
+}
+.info {
+	margin:0 20px;
+}
+h1 {
+	font-family:'Trajan Pro';
+}
+p {
+	font-family:'Helvetica Neue Light';
+	color:rgba(0,0,0,0.80);
+}
+p.doce {
+	font-size:0.75em;
+}
+p.trece {
+	font-size:0.812em;
+}
+.catorce {
+	font-size:0.875em;
+}
+p.dieciocho {
+	font-size:1.125em;
+}
+a.mainmenu {
+	font-size:1.125em;
+	text-decoration:none;
+    color:rgba(166,164,162,1.00);
+}
+/* mouse over link */
+a.mainmenu:hover {
+    color:rgba(105,104,105,1.00);
+	text-decoration:none;
+}
+/* selected link */
+a.mainmenu:active {
+    color:rgba(114,137,203,1.00);
+}
+a.enlaces {
+	text-decoration:none;
+    color:rgba(0,0,0,0.80);
+}
+/* mouse over link */
+a.enlaces:hover {
+    color:rgba(105,104,105,1.00);
+	text-decoration:underline;
+}
+/* selected link */
+a.enlaces:active {
+    color:rgba(114,137,203,1.00);
+}
+a.emba {
+    color:rgba(0,0,0,1.00);
+	text-decoration:none;
+}
+/* mouse over link */
+a.emba:hover {
+    color:rgba(54,102,200,1.00);
+	text-decoration:underline;
+}
+/* selected link */
+a.emba:active {
+    color:rgba(114,137,203,1.00);
+}
+li {
+	font-family:'Helvetica Neue Light';
+	color:rgba(0,0,0,0.80);
+}
+.px {
+	height:300px;
+	min-height:300px;
+	background:transparent;
+	position:relative;
+	overflow:hidden;
+}
+#descanso3 {
+	background:rgba(0,0,0,1.00) url(aam1.png) 0% 0 no-repeat fixed;
+	min-height: 367px;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1280px;
+	min-width:1280px;
+	position: relative;
+	-webkit-box-shadow: 0 0 20px rgba(0,0,0,0.4);
+	box-shadow: 0 0 20px rgba(0,0,0,0.4);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}

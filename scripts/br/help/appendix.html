@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Appendix</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="css/help.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/prettify.min.js"></script>
+    <script src="js/bootstrap-scrollspy.min.js"></script>
+</head>
+<body onload="prettyPrint()" data-spy="scroll" data-target="#side-menu">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <ul class="nav">
+                    <li>
+                        <a href="help.html">Setup</a>
+                    </li>
+                    <li>
+                        <a href="api.html">API</a>
+                    </li>
+                    <li class="active">
+                        <a href="appendix.html">Appendix</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container content">
+        <div class="row">
+            <div class="span3">
+                <div id="side-menu" class="well affix">
+                    <ul class="nav nav-list">
+                        <li class="nav-header">Appendix</li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#effects">Image Effects</a>
+                        </li>
+                        <li>
+                            <a href="#order">Transition Orders</a>
+                        </li>
+                        <li>
+                            <a href="#ken-burns">Ken Burns</a>
+                        </li>
+                        <li>
+                            <a href="#layer-effects">Layer Effects</a>
+                        </li>
+                        <li>
+                            <a href="#style-class">Style Class</a>
+                        </li>
+                        <li>
+                            <a href="#positions">Positions</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="span9">
+                <div class="hero-unit">
+                    <h1>jQuery Banner Rotator</h1>
+                    <h2><span class="muted">Appendix</span></h2>
+                </div>
+                
+                <!-- effects -->
+                <section id="effects">
+                    <h3>Image Effects</h3>
+                    <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th style="width:20%">name</th>
+                            <th style="width:50%">description</th>
+                            <th style="width:10%;text-align:center">directional</th>
+                            <th style="width:10%;text-align:center">CSS3</th>
+                            <th style="width:10%;text-align:center">3D</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>none</td>
+                            <td>No transition effect.</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>random</td>
+                            <td>Random transition effect.</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>cover</td>
+                            <td>New image covers over previous image.</td>
+                            <td><div class="text-center"><i class="icon-ok"></i></div></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>expand</td>
+                            <td>Image expands in size.</td>
+                            <td></td>
+                            <td><div class="text-center"><i class="icon-ok"></i></div></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>fade</td>
+                            <td>Image fades in.</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>flip</td>
+                            <td>Image flips over.</td>
+                            <td><div class="text-center"><i class="icon-ok"></i></div></td>
+                            <td><div class="text-center"><i class="icon-ok"></i></div></td>
+                            <td><div class="text-center"><i class="icon-ok"></i></div></td>
+                        </tr>
+                        <tr>
+                            <td>move</td>
+                            <td>Image moves into view.</td>
+                            <td><div class="text-center"><i class="icon-ok"></i></div></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>push</td>
+                            <td>New image pushes previous image out.</td>
+                            <td><div class="text-center"><i class="icon-ok"></i></div></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>rotate</td>
+                            <td>Cube rotation effect.</td>
+                            <td><div class="text-center"><i class="icon-ok"></i></div></td>
+                            <td><div class="text-center"><i class="icon-ok"></i></div></td>
+                            <td><div class="text-center"><i class="icon-ok"></i></div></td>
+                        </tr>
+                        <tr>
+                            <td>slide</td>
+                            <td>Similar to push, but in natural slide direction.</td>
+                            <td><div class="text-center"><i class="icon-ok"></i></div></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>zoom</td>
+                            <td>Previous image zooms in and fades out, showing new image.</td>
+                            <td></td>
+                            <td><div class="text-center"><i class="icon-ok"></i></div></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                    </table>
+                    <p class="muted">
+                        <strong>*</strong> CSS3 effects are only supported by modern browsers. A fallback effect is applied if feature is not supported.
+                    </p>
+                </section> 
+
+                <!-- order -->
+                <section id="order">
+                    <h3>Transition Orders</h3>
+                    <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th style="width:20%">name</th>
+                            <th style="width:55%">description</th>
+                            <th>effect type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>random</td>
+                            <td>random order.</td>
+                            <td>columns | rows | grid</td>
+                        </tr>
+                        <tr>
+                            <td>right</td>
+                            <td>from left to right.</td>
+                            <td>columns | grid</td>
+                        </tr>
+                        <tr>
+                            <td>left</td>
+                            <td>from right to left.</td>
+                            <td>columns | grid</td>
+                        </tr>
+                        <tr>
+                            <td>down</td>
+                            <td>from top to bottom.</td>
+                            <td>rows | grid</td>
+                        </tr>
+                        <tr>
+                            <td>up</td>
+                            <td>from bottom to top.</td>
+                            <td>rows | grid</td>
+                        </tr>
+                        <tr>
+                            <td>downRight</td>
+                            <td>from top left corner to bottom right corner.</td>
+                            <td>grid</td>
+                        </tr>
+                        <tr>
+                            <td>downLeft</td>
+                            <td>from top right corner to bottom left corner.</td>
+                            <td>grid</td>
+                        </tr>
+                        <tr>
+                            <td>upRight</td>
+                            <td>from bottom left corner to top right corner.</td>
+                            <td>grid</td>
+                        </tr>
+                        <tr>
+                            <td>upLeft</td>
+                            <td>from bottom right corner to top left corner.</td>
+                            <td>grid</td>
+                        </tr>
+                        <tr>
+                            <td>spiralIn</td>
+                            <td>start from edge, spiraling in.</td>
+                            <td>grid</td>
+                        </tr>
+                        <tr>
+                            <td>spiralOut</td>
+                            <td>start from inside, spiraling out.</td>
+                            <td>grid</td>
+                        </tr>
+                        <tr>
+                            <td>zigZagDown</td>
+                            <td>zig-zag from top to bottom.</td>
+                            <td>grid</td>
+                        </tr>
+                        <tr>
+                            <td>zigZagUp</td>
+                            <td>zig-zag from bottom to top.</td>
+                            <td>grid</td>
+                        </tr>
+                        <tr>
+                            <td>zigZagRight</td>
+                            <td>zig-zag from left to right.</td>
+                            <td>grid</td>
+                        </tr>
+                        <tr>
+                            <td>zigZagLeft</td>
+                            <td>zig-zag from right to left.</td>
+                            <td>grid</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </section>
+
+                <!-- ken burns -->
+                <section id="ken-burns">
+                    <h3>Ken Burns</h3>
+                    <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th style="width:25%">name</th>
+                            <th style="width:50%">description</th>
+                            <th>type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>none</td>
+                            <td>No effect.</td>
+                            <td class='multi-odd'>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>panRight</td>
+                            <td>pan right.</td>
+                            <td rowspan="8" class='multi-even'>Pan</td>
+                        </tr>
+                        <tr>
+                            <td>panLeft</td>
+                            <td>pan left.</td>
+                        </tr>
+                        <tr>
+                            <td>panDown</td>
+                            <td>pan down.</td>
+                        </tr>
+                        <tr>
+                            <td>panUp</td>
+                            <td>pan up.</td>
+                        </tr>
+                        <tr>
+                            <td>panDownRight</td>
+                            <td>pan down right.</td>
+                        </tr>
+                        <tr>
+                            <td>panDownLeft</td>
+                            <td>pan down left.</td>
+                        </tr>
+                        <tr>
+                            <td>panUpRight</td>
+                            <td>pan up right.</td>
+                        </tr>
+                        <tr>
+                            <td>panUpLeft</td>
+                            <td>pan up left.</td>
+                        </tr>
+                        <tr>
+                            <td>zoomIn</td>
+                            <td>zoom in.</td>
+                            <td rowspan="9" class='multi-odd'>Zoom In</td>
+                        </tr>
+                        <tr>
+                            <td>zoomInRight</td>
+                            <td>zoom in right.</td>
+                        </tr>
+                        <tr>
+                            <td>zoomInLeft</td>
+                            <td>zoom in left.</td>
+                        </tr>
+                        <tr>
+                            <td>zoomInDown</td>
+                            <td>zoom in down.</td>
+                        </tr>
+                        <tr>
+                            <td>zoomInUp</td>
+                            <td>zoom in up.</td>
+                        </tr>
+                        <tr>
+                            <td>zoomInDownRight</td>
+                            <td>zoom in down right.</td>
+                        </tr>
+                        <tr>
+                            <td>zoomInDownLeft</td>
+                            <td>zoom in down left.</td>
+                        </tr>
+                        <tr>
+                            <td>zoomInUpRight</td>
+                            <td>zoom in up right.</td>
+                        </tr>
+                        <tr>
+                            <td>zoomInUpLeft</td>
+                            <td>zoom in up left.</td>
+                        </tr>
+                        <tr>
+                            <td>zoomOut</td>
+                            <td>zoom out.</td>
+                            <td rowspan="9" class='multi-even'>Zoom Out</td>
+                        </tr>
+                        <tr>
+                            <td>zoomOutRight</td>
+                            <td>zoom out right.</td>
+                        </tr>
+                        <tr>
+                            <td>zoomOutLeft</td>
+                            <td>zoom out left.</td>
+                        </tr>
+                        <tr>
+                            <td>zoomOutDown</td>
+                            <td>zoom out down.</td>
+                        </tr>
+                        <tr>
+                            <td>zoomOutUp</td>
+                            <td>zoom out up.</td>
+                        </tr>
+                        <tr>
+                            <td>zoomOutDownRight</td>
+                            <td>zoom out down right.</td>
+                        </tr>
+                        <tr>
+                            <td>zoomOutDownLeft</td>
+                            <td>zoom out down left.</td>
+                        </tr>
+                        <tr>
+                            <td>zoomOutUpRight</td>
+                            <td>zoom out up right.</td>
+                        </tr>
+                        <tr>
+                            <td>zoomOutUpLeft</td>
+                            <td>zoom out up left.</td>
+                        </tr>
+                        <tr>
+                            <td>random</td>
+                            <td>random effect.</td>
+                            <td rowspan="5" class='multi-odd'>Random</td>
+                        </tr>
+                        <tr>
+                            <td>randomPan</td>
+                            <td>random pan effect.</td>
+                        </tr>
+                        <tr>
+                            <td>randomZoom</td>
+                            <td>random zoom in or out effect.</td>
+                        </tr>
+                        <tr>
+                            <td>randomZoomIn</td>
+                            <td>random zoom in effect.</td>
+                        </tr>
+                        <tr>
+                            <td>randomZoomOut</td>
+                            <td>random zoom out effect.</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                    <p class="muted"><strong>*</strong> Ken Burns effects require css animation support.</p>
+                </section>
+
+                <!-- layer effects -->
+                <section id="layer-effects">
+                    <h3>Layer Effects</h3>
+                    <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th style="width:20%">name</th>
+                            <th style="width:50%">description</th>
+                            <th style="width:15%">CSS3</th>
+                            <th>type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>none</td>
+                            <td>No effect.</td>
+                            <td></td>
+                            <td rowspan="2" class="multi-odd">N/A</td>
+                        </tr>
+                        <tr>
+                            <td>fade</td>
+                            <td>Layer fades in.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>flipDown</td>
+                            <td>Layer flips down.</td>
+                            <td><div class="text-center"><i class="icon-ok"></i></div></td>
+                            <td rowspan="4" class="multi-even">Flip</td>
+                        </tr>
+                        <tr>
+                            <td>flipUp</td>
+                            <td>Layer flips up.</td>
+                            <td><div class="text-center"><i class="icon-ok"></i></div></td>
+                        </tr>
+                        <tr>
+                            <td>flipRight</td>
+                            <td>Layer flips right.</td>
+                            <td><div class="text-center"><i class="icon-ok"></i></div></td>
+                        </tr>
+                        <tr>
+                            <td>flipLeft</td>
+                            <td>Layer flips left.</td>
+                            <td><div class="text-center"><i class="icon-ok"></i></div></td>
+                        </tr>
+                        <tr>
+                            <td>moveDown</td>
+                            <td>Layer moves down.</td>
+                            <td></td>
+                            <td rowspan="4" class="multi-odd">Move</td>
+                        </tr>
+                        <tr>
+                            <td>moveUp</td>
+                            <td>Layer moves up.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>moveRight</td>
+                            <td>Layer moves right.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>moveLeft</td>
+                            <td>Layer moves left.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>shiftDown</td>
+                            <td>Layer shifts down.</td>
+                            <td></td>
+                            <td rowspan="4" class="multi-even">Shift</td>
+                        </tr>
+                        <tr>
+                            <td>shiftUp</td>
+                            <td>Layer shifts up.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>shiftRight</td>
+                            <td>Layer shifts right.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>shiftLeft</td>
+                            <td>Layer shifts left.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>slideDown</td>
+                            <td>Layer slides down.</td>
+                            <td></td>
+                            <td rowspan="4" class="multi-odd">Slide</td>
+                        </tr>
+                        <tr>
+                            <td>slideUp</td>
+                            <td>Layer slides up.</td>
+                            <td></td>
+                        </tr> 
+                        <tr>
+                            <td>slideRight</td>
+                            <td>Layer slides right.</td>
+                            <td></td>
+                        </tr> 
+                        <tr>
+                            <td>slideLeft</td>
+                            <td>Layer slides left.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>spinInRight</td>
+                            <td>Layer spins clockwise, zooming in.</td>
+                            <td><div class="text-center"><i class="icon-ok"></i></div></td>
+                            <td rowspan="4" class="multi-even">Spin</td>
+                        </tr>
+                        <tr>
+                            <td>spinInLeft</td>
+                            <td>Layer spins counter-clockwise, zooming in.</td>
+                            <td><div class="text-center"><i class="icon-ok"></i></div></td>
+                        </tr>
+                        <tr>
+                            <td>spinOutRight</td>
+                            <td>Layer spins clockwise, zooming out.</td>
+                            <td><div class="text-center"><i class="icon-ok"></i></div></td>
+                        </tr>
+                        <tr>
+                            <td>spinOutLeft</td>
+                            <td>Layer spins counter-clockwise, zooming out.</td>
+                            <td><div class="text-center"><i class="icon-ok"></i></div></td>
+                        </tr>
+                        <tr>
+                            <td>zoomIn</td>
+                            <td>Layer zooms in.</td>
+                            <td><div class="text-center"><i class="icon-ok"></i></div></td>
+                            <td rowspan="2" class="multi-odd">Zoom</td>
+                        </tr>
+                        <tr>
+                            <td>zoomOut</td>
+                            <td>Layer zooms out.</td>
+                            <td><div class="text-center"><i class="icon-ok"></i></div></td>
+                        </tr>
+                    </tbody> 
+                    </table>
+                    <p class="muted">
+                        <strong>*</strong> CSS3 effects are only supported by modern browsers. A fallback effect is applied if feature is not supported.
+                    </p>
+                </section>
+
+                <!-- style class -->
+                <section id="style-class">
+                    <h3>Style Class</h3>
+                    <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th style="width:25%">name</th>
+                            <th>description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>shadow</td>
+                            <td>Create a shadow under the banner rotator.</td>
+                        </tr>
+                        <tr>
+                            <td>white</td>
+                            <td>Use white color scheme for all elements.</td>
+                        </tr>
+                        <tr>
+                            <td>white-button</td>
+                            <td>Use white color scheme for small buttons and thumbnails.</td>
+                        </tr>
+                        <tr>
+                            <td>white-cpanel</td>
+                            <td>Use white color scheme for control panel's background.</td>
+                        </tr>
+                        <tr>
+                            <td>white-nav-thumb</td>
+                            <td>Use white color scheme for navigation thumbs.</td>
+                        </tr>
+                        <tr>
+                            <td>white-tooltip</td>
+                            <td>Use white color scheme for tooltip.</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </section>
+                 
+                <!-- positions -->
+                <section id="positions">
+                    <h3>Positions</h3>
+                    <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th style="width:70%">value</th>
+                            <th style="text-align:center">horizontal</th>
+                            <th style="text-align:center">vertical</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>left top</td>
+                            <td><div class="text-center"><i class="icon-ok"></i></div></td>
+                            <td><div class="text-center"><i class="icon-ok"></i></div></td>
+                        </tr>
+                        <tr>
+                            <td>left center</td>
+                            <td></td>
+                            <td><div class="text-center"><i class="icon-ok"></i></div></td>
+                        </tr>
+                        <tr>
+                            <td>left bottom</td>
+                            <td><div class="text-center"><i class="icon-ok"></i></div></td>
+                            <td><div class="text-center"><i class="icon-ok"></i></div></td>
+                        </tr>
+                        <tr>
+                            <td>right top</td>
+                            <td><div class="text-center"><i class="icon-ok"></i></div></td>
+                            <td><div class="text-center"><i class="icon-ok"></i></div></td>
+                        </tr>
+                        <tr>
+                            <td>right center</td>
+                            <td></td>
+                            <td><div class="text-center"><i class="icon-ok"></i></div></td>
+                        </tr>
+                        <tr>
+                            <td>right bottom</td>
+                            <td><div class="text-center"><i class="icon-ok"></i></div></td>
+                            <td><div class="text-center"><i class="icon-ok"></i></div></td>
+                        </tr>
+                        <tr>
+                            <td>center top</td>
+                            <td><div class="text-center"><i class="icon-ok"></i></div></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>center bottom</td>
+                            <td><div class="text-center"><i class="icon-ok"></i></div></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p class="pull-right">copyright &copy; 2015 webtako</p>
+            <p><a href="http://codecanyon.net/user/webtako" target="_blank">envato</a> / <a href="http://www.twitter.com/webtako" target="_blank">twitter</a></p>
+        </div>
+    </footer>
+</body>
+</html>

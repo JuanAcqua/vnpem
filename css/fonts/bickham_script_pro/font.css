@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'BickhamScriptPro-Regular';
+  src: url('BickhamScriptPro-Regular.eot');
+  src: url('BickhamScriptPro-Regular.woff2') format('woff2'),
+       url('BickhamScriptPro-Regular.woff') format('woff'),
+       url('BickhamScriptPro-Regular.ttf') format('truetype'),
+       url('BickhamScriptPro-Regular.svg#BickhamScriptPro-Regular') format('svg'),
+       url('BickhamScriptPro-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+

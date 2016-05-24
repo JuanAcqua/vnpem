@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>API</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="css/help.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/prettify.min.js"></script>
+    <script src="js/bootstrap-scrollspy.min.js"></script>
+</head>
+<body onload="prettyPrint()" data-spy="scroll" data-target="#side-menu">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <ul class="nav">
+                    <li>
+                        <a href="help.html">Setup</a>
+                    </li>
+                    <li class="active">
+                        <a href="api.html">API</a>
+                    </li>
+                    <li>
+                        <a href="appendix.html">Appendix</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container content">
+        <div class="row">
+            <div class="span3">
+                <div id="side-menu" class="well affix">
+                    <ul class="nav nav-list">
+                        <li class="nav-header">
+                            <a href="#options">Options</a>
+                        </li>
+                        <li>
+                            <a href="#size">Size</a>
+                        </li>
+                        <li>
+                            <a href="#slideshow">Slide Show</a>
+                        </li>
+                        <li>
+                            <a href="#transition">Transition</a>
+                        </li>
+                        <li>
+                            <a href="#kb">Ken Burns</a>
+                        </li>
+                        <li>
+                            <a href="#control">Control Elements</a>
+                        </li>
+                        <li>
+                            <a href="#layer">Layers</a>
+                        </li>
+                        <li>
+                            <a href="#misc">Miscellaneous</a>
+                        </li>
+                        <li>
+                            <a href="#i18n">Internationalization</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li class="nav-header">
+                            <a href="#methods">Methods</a>
+                        </li>
+                        <li>
+                            <a href="#play-method">play</a>
+                        </li>
+                        <li>
+                            <a href="#pause-method">pause</a>
+                        </li>
+                        <li>
+                            <a href="#toggle-play-method">togglePlay</a>
+                        </li>
+                        <li>
+                            <a href="#prev-method">prev</a>
+                        </li>
+                        <li>
+                            <a href="#next-method">next</a>
+                        </li>
+                        <li>
+                            <a href="#to-method">to</a>
+                        </li>
+                        <li>
+                            <a href="#option-method">option</a>
+                        </li>
+                        <li>
+                            <a href="#destroy-method">destroy</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li class="nav-header">
+                            <a href="#events">Events</a>
+                        </li>
+                        <li>
+                            <a href="#create-event">create</a>
+                        </li>
+                        <li>
+                            <a href="#play-event">play</a>
+                        </li>
+                        <li>
+                            <a href="#pause-event">pause</a>
+                        </li>
+                        <li>
+                            <a href="#prev-event">prev</a>
+                        </li>
+                        <li>
+                            <a href="#next-event">next</a>
+                        </li>
+                        <li>
+                            <a href="#change-event">change</a>
+                        </li>
+                        <li>
+                            <a href="#changed-event">changed</a>
+                        </li>
+                        <li>
+                            <a href="#load-event">load</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="span9">
+                <div class="hero-unit">
+                    <h1>jQuery Banner Rotator</h1>
+                    <h2><span class="muted">API</span></h2>
+              	</div>
+
+                <!-- options -->
+                <section id="options">
+                    <div class="page-header">
+                        <h2>Options</h2>
+                    </div>
+                    <p>
+                        The banner rotator provides many customizable options.
+                        The following are all options grouped by categories.<br/>
+                        (See <a href="help.html#options">setting options</a> for directions on usage.)
+                    </p>
+                </section>
+
+                <!-- size options -->
+                <section id="size">
+                    <h3>Size</h3>
+                    <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th class="header-attr">name</th>
+                            <th class="header-type">type</th>
+                            <th class="header-default">default</th>
+                            <th>description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>responsive</td>
+                            <td>boolean</td>
+                            <td>true</td>
+                            <td>Enable responsive mode.</td>
+                        </tr>
+                        <tr>
+                            <td>width</td>
+                            <td>number</td>
+                            <td>1000</td>
+                            <td>Width of the banner rotator.</td>
+                        </tr>
+                        <tr>
+                            <td>height</td>
+                            <td>number</td>
+                            <td>400</td>
+                            <td>Height of the banner rotator.</td>
+                        </tr>
+                        <tr>
+                            <td>thumbWidth</td>
+                            <td>number</td>
+                            <td>32</td>
+                            <td>Width of the thumbnails.</td>
+                        </tr>
+                        <tr>
+                            <td>thumbHeight</td>
+                            <td>number</td>
+                            <td>32</td>
+                            <td>Height of the thumbnails.</td>
+                        </tr>
+                        <tr>
+                            <td>thumbMargin</td>
+                            <td>number</td>
+                            <td>3</td>
+                            <td>Margin of the thumbnails.</td>
+                        </tr>
+                        <tr>
+                            <td>buttonWidth</td>
+                            <td>number</td>
+                            <td>32</td>
+                            <td>Width of the buttons.</td>
+                        </tr>
+                        <tr>
+                            <td>buttonHeight</td>
+                            <td>number</td>
+                            <td>32</td>
+                            <td>Height of the buttons.</td>
+                        </tr>
+                        <tr>
+                            <td>buttonMargin</td>
+                            <td>number</td>
+                            <td>3</td>
+                            <td>Margin of the buttons.</td>
+                        </tr>
+                        <tr>
+                            <td>sideButtonMargin</td>
+                            <td>number</td>
+                            <td>0</td>
+                            <td>Margin of the outside navigation buttons.</td>
+                        </tr>
+                        <tr>
+                            <td>tooltipWidth</td>
+                            <td>number | string</td>
+                            <td>'auto'</td>
+                            <td>Width of the tooltip. Use 'auto' for tooltip width to match content.</td>
+                        </tr>
+                        <tr>
+                            <td>tooltipHeight</td>
+                            <td>number | string</td>
+                            <td>'auto'</td>
+                            <td>Height of the tooltip. Use 'auto' for tooltip height to match content.</td>
+                        </tr>
+                        <tr>
+                            <td>navThumbWidth</td>
+                            <td>number</td>
+                            <td>100</td>
+                            <td>Width of the navigation thumbs.</td>
+                        </tr>
+                        <tr>
+                            <td>navThumbHeight</td>
+                            <td>number</td>
+                            <td>75</td>
+                            <td>Height of the navigation thumbs.</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </section>
+
+                <!-- slideshow options -->
+                <section id="slideshow">
+                    <h3>Slide Show</h3>
+                    <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th class="header-attr">name</th>
+                            <th class="header-type">type</th>
+                            <th class="header-default">default</th>
+                            <th>description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>autoPlay</td>
+                            <td>boolean</td>
+                            <td>true</td>
+                            <td>Start slide show automatically.</td>
+                        </tr>
+                        <tr>
+                            <td>delay</td>
+                            <td>number</td>
+                            <td>6000</td>
+                            <td>The slide show's delay, in milliseconds.</td>
+                        </tr>
+                        <tr>
+                            <td>startIndex</td>
+                            <td>number | string</td>
+                            <td>0</td>
+                            <td>
+                                The index of the slide to start on. (index uses zero-based numbering).
+                                Set 'random' for a random index.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>pauseOnHover</td>
+                            <td>boolean</td>
+                            <td>false</td>
+                            <td>Pause slide show on hover and resume on hover out.</td>
+                        </tr>
+                        <tr>
+                            <td>pauseOnInteraction</td>
+                            <td>boolean</td>
+                            <td>false</td>
+                            <td>Pause slide show on click of any control elements.</td>
+                        </tr>
+                        <tr>
+                            <td>playOnce</td>
+                            <td>boolean</td>
+                            <td>false</td>
+                            <td>Play slide show once, stopping at last slide.</td>
+                        </tr>
+                        <tr>
+                            <td>timer</td>
+                            <td>string</td>
+                            <td>'pie'</td>
+                            <td>The timer indicator type - 'none' | 'bar' | 'pie'</td>
+                        </tr>
+                        <tr>
+                            <td>timerPosition</td>
+                            <td>string</td>
+                            <td>'right top'</td>
+                            <td>Where the timer is positioned - 'left top' | 'right top' | 'left bottom' | 'right bottom'</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </section>
+
+                <!-- transition options -->
+                <section id="transition">
+                    <h3>Transition</h3>
+                    <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th class="header-attr">name</th>
+                            <th class="header-type">type</th>
+                            <th class="header-default">default</th>
+                            <th>description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>cssTransition</td>
+                            <td>boolean</td>
+                            <td>true</td>
+                            <td>Enable css transition if supported by browser.</td>
+                        </tr>
+                        <tr>
+                            <td>effect</td>
+                            <td>string</td>
+                            <td>'fade'</td>
+                            <td>
+                                The image transition effect.
+                                See <a href="appendix.html#effects">image effects</a> for available effects.
+                            </td>
+                        </tr> 
+                        <tr>
+                            <td>duration</td>
+                            <td>number</td>
+                            <td>800</td>
+                            <td>The duration of the effect, in milliseconds.</td>
+                        </tr>
+                        <tr>
+                            <td>easing</td>
+                            <td>string</td>
+                            <td>'ease'</td>
+                            <td>
+                                The easing of the effect.
+                                Refer to <a href="http://easings.net/" target="_blank">site</a> for more information about easing.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>effectOnStart</td>
+                            <td>boolean</td>
+                            <td>true</td>
+                            <td>Enable initial starting effect.</td>
+                        </tr>
+                        <tr>
+                            <td>columns</td>
+                            <td>number</td>
+                            <td>1</td>
+                            <td>The number of columns the effect consists of.</td>
+                        </tr>
+                        <tr>
+                            <td>rows</td>
+                            <td>number</td>
+                            <td>1</td>
+                            <td>The number of rows the effect consists of.</td>
+                        </tr>
+                        <tr>
+                            <td>interval</td>
+                            <td>number</td>
+                            <td>100</td>
+                            <td>
+                                The start delay between the pieces in the effect, in milliseconds.<br/>
+                                Used only when effect is divided into multiple rows or columns.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>direction</td>
+                            <td>string</td>
+                            <td>'right'</td>
+                            <td>
+                                The effect's direction - 'up' | 'down' | 'left' | 'right'<br/>
+                                Used only for <a href="appendix.html#effects">directional type</a> effects.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>order</td>
+                            <td>string</td>
+                            <td>'right'</td>
+                            <td>
+                                The starting order of the pieces in the effect.
+                                Used only when effect is divided into multiple rows or columns.
+                                See <a href="appendix.html#order">transition orders</a> for available orders.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>alternate</td>
+                            <td>boolean</td>
+                            <td>false</td>
+                            <td>
+                                If pieces in the effect alternate in effect directions.
+                                Used only for <a href="appendix.html#effects">directional type</a> effects divided into multiple rows or columns.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>autoReverse</td>
+                            <td>boolean</td>
+                            <td>true</td>
+                            <td>When navigating to the previous slide, if the effect will be in reverse direction and order.</td>
+                        </tr>
+                        <tr>
+                            <td>depth</td>
+                            <td>number | string</td>
+                            <td>0</td>
+                            <td>The z offset used during 3D transition effects. Use 'auto' to automatically calculate offset based on shape size.</td>
+                        </tr>
+                        <tr>
+                            <td>shapeShading</td>
+                            <td>boolean</td>
+                            <td>true</td>
+                            <td>Enable shading for 3D transition effects.</td>
+                        </tr>
+                        <tr>
+                            <td>shapeColor</td>
+                            <td>string</td>
+                            <td>'#333333'</td>
+                            <td>The background color of transition shapes, in hexadecimal notation.</td>
+                        </tr>
+                        <tr>
+                            <td>shapeDepth</td>
+                            <td>number</td>
+                            <td>0</td>
+                            <td>The depth (thickness) of transition shapes. Used only when effect is set to 'flip'.</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </section>
+
+                <!-- ken burns options -->
+                <section id="kb">
+                    <h3>Ken Burns</h3>
+                    <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th class="header-attr">name</th>
+                            <th class="header-type">type</th>
+                            <th class="header-default">default</th>
+                            <th>description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>kbEffect</td>
+                            <td>string</td>
+                            <td>'none'</td>
+                            <td>
+                                The Ken Burns effect of the images.
+                                See <a href="appendix.html#ken-burns">Ken Burns</a> for available effects.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>kbDuration</td>
+                            <td>number | string</td>
+                            <td>'auto'</td>
+                            <td>
+                                The duration of the Ken Burns effect, in milliseconds.
+                                Use 'auto' for duration to equal to slide show's delay.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>kbEasing</td>
+                            <td>string</td>
+                            <td>'linear'</td>
+                            <td>
+                                The easing of the Ken Burns effect.
+                                Refer to <a href="http://easings.net/" target="_blank">site</a> for more information about easing.
+                            </td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </section>
+
+                <!-- control -->
+                <section id="control">
+                    <h3>Control Elements</h3>
+                    <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th class="header-attr">name</th>
+                            <th class="header-type">type</th>
+                            <th class="header-default">default</th>
+                            <th>description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>cpanelPosition</td>
+                            <td>string</td>
+                            <td>'left bottom'</td>
+                            <td>
+                                Where the control panel is positioned.
+                                See <a href="appendix.html#positions">positions</a> for available values.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>cpanelOrientation</td>
+                            <td>string</td>
+                            <td>'horizontal'</td>
+                            <td>The control panel's orientation - 'horizontal' | 'vertical'</td>
+                        </tr>
+                        <tr>
+                            <td>cpanelOutside</td>
+                            <td>boolean</td>
+                            <td>false</td>
+                            <td>If the control panel is located outside of banner rotator's screen.</td>
+                        </tr>
+                        <tr>
+                            <td>cpanelOnHover</td>
+                            <td>boolean</td>
+                            <td>false</td>
+                            <td>Display control panel on hover and hide on hover out.</td>
+                        </tr>
+                        <tr>
+                            <td>thumbnails</td>
+                            <td>string</td>
+                            <td>'number'</td>
+                            <td>The type of thumbnails - 'none' | 'bullet' | 'number' | 'text' | 'image'</td>
+                        </tr>
+                        <tr>
+                            <td>selectOnHover</td>
+                            <td>boolean</td>
+                            <td>false</td>
+                            <td>Select slides on hover of thumbnails.</td>
+                        </tr>
+                        <tr>
+                            <td>tooltip</td>
+                            <td>string</td>
+                            <td>'text'</td>
+                            <td>The type of tooltip - 'none' | 'text' | 'image'</td>
+                        </tr>
+                        <tr>
+                            <td>tooltipDelay</td>
+                            <td>number</td>
+                            <td>0</td>
+                            <td>The delay for tooltip to appear, in milliseconds.</td>
+                        </tr>
+                        <tr>
+                            <td>navButtons</td>
+                            <td>string</td>
+                            <td>'small'</td>
+                            <td>The type of navigation buttons - 'none' | 'small' | 'large' | 'outside'</td>
+                        </tr>
+                        <tr>
+                            <td>navButtonsOnHover</td>
+                            <td>boolean</td>
+                            <td>false</td>
+                            <td>
+                                Show navigation buttons on hover and hide on hover out.
+                                Used only when navButtons is set to 'large' or 'outside'.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>navThumbs</td>
+                            <td>boolean</td>
+                            <td>false</td>
+                            <td>Display the side navigation thumbs. Used only when navButtons is set to 'large' or 'outside'.</td>
+                        </tr>
+                        <tr>
+                            <td>playButton</td>
+                            <td>boolean</td>
+                            <td>true</td>
+                            <td>Display the play button.</td>
+                        </tr>
+                        <tr>
+                            <td>groupButtons</td>
+                            <td>boolean</td>
+                            <td>false</td>
+                            <td>Group together the thumbnails and buttons of the control panel.</td>
+                        </tr>
+                        <tr>
+                            <td>cpanelGap</td>
+                            <td>number</td>
+                            <td>0</td>
+                            <td>
+                                The spacing between the screen and the outside control panel. 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>hideControl</td>
+                            <td>boolean</td>
+                            <td>false</td>
+                            <td>Hide control elements during image transition.</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </section>
+
+                <!-- layers -->
+                <section id="layer">
+                    <h3>Layers</h3>
+                    <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th class="header-attr">name</th>
+                            <th class="header-type">type</th>
+                            <th class="header-default">default</th>
+                            <th>description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>layerEffect</td>
+                            <td>string</td>
+                            <td>'fade'</td>
+                            <td>
+                                The layer's transition effect.
+                                See <a href="appendix.html#layer-effects">layer effects</a> for available effects.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>layerDuration</td>
+                            <td>number</td>
+                            <td>500</td>
+                            <td>The duration of the layer's transition effect, in milliseconds.</td>
+                        </tr>
+                        <tr>
+                            <td>layerEasing</td>
+                            <td>string</td>
+                            <td>'ease'</td>
+                            <td>
+                                The easing of the layer's transition effect.
+                                Refer to <a href="http://easings.net/" target="_blank">site</a> for more information about easing.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>layerDelay</td>
+                            <td>number</td>
+                            <td>0</td>
+                            <td>The start delay for the layer's transition effect, in milliseconds.</td>
+                        </tr>
+                        <tr>
+                            <td>layerEffectOut</td>
+                            <td>string</td>
+                            <td>'fade'</td>
+                            <td>
+                                The layer's transition out effect.
+                                See <a href="appendix.html#layer-effects">layer effects</a> for available effects.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>layerDurationOut</td>
+                            <td>number</td>
+                            <td>500</td>
+                            <td>The duration of the layer's transition out effect, in milliseconds.</td> 
+                        </tr>
+                        <tr>
+                            <td>layerEasingOut</td>
+                            <td>string</td>
+                            <td>'ease'</td>
+                            <td>
+                                The easing of the layer's transition out effect.
+                                Refer to <a href="http://easings.net/" target="_blank">site</a> for more information about easing.
+                            </td>
+                        </tr> 
+                        <tr>
+                            <td>layerDelayOut</td>
+                            <td>number</td>
+                            <td>0</td>
+                            <td>The start delay for the layer's transition out effect, in milliseconds.</td>
+                        </tr>
+                        <tr>
+                            <td>layerSync</td>
+                            <td>boolean</td>
+                            <td>true</td>
+                            <td>Defer layer transition effect until image transition is complete.</td>
+                        </tr>
+                        <tr>
+                            <td>layerOutSync</td>
+                            <td>boolean</td>
+                            <td>true</td>
+                            <td>Defer image transition until layer transition out effect is complete.</td>
+                        </tr>
+                        <tr>
+                            <td>layerOnHover</td>
+                            <td>boolean</td>
+                            <td>false</td>
+                            <td>Display layers on hover and hide on hover out.</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </section>
+
+                <!-- misc -->
+                <section id="misc">
+                    <h3>Miscellaneous</h3>
+                    <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th class="header-attr">name</th>
+                            <th class="header-type">type</th>
+                            <th class="header-default">default</th>
+                            <th>description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>imagePosition</td>
+                            <td>string</td>
+                            <td>'fill'</td>
+                            <td>The position of slide image - 'fill' | 'fit' | 'center' | 'stretch' | 'none'</td>
+                        </tr>
+                        <tr>
+                            <td>preload</td>
+                            <td>boolean</td>
+                            <td>false</td>
+                            <td>Preload all images before startup.</td>
+                        </tr>
+                        <tr>
+                            <td>shuffle</td>
+                            <td>boolean</td>
+                            <td>false</td>
+                            <td>Shuffle slide order.</td>
+                        </tr>
+                        <tr>
+                            <td>keyboard</td>
+                            <td>boolean</td>
+                            <td>true</td>
+                            <td>Enable keyboard control when in focus. Use the left and right arrow to navigate and spacebar to play/pause slide show.</td>
+                        </tr>
+                        <tr>
+                            <td>mousewheel</td>
+                            <td>boolean</td>
+                            <td>false</td>
+                            <td>Enable mousewheel scroll navigation.</td>
+                        </tr>
+                        <tr>
+                            <td>swipe</td>
+                            <td>string</td>
+                            <td>'horizontal'</td>
+                            <td>Touch swipe orientation - 'none' | 'horizontal' | 'vertical'</td>
+                        </tr>
+                        <tr>
+                            <td>swipeDirection</td>
+                            <td>string</td>
+                            <td>'normal'</td>
+                            <td>Touch swipe direction - 'normal' | 'reverse'</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </section>
+
+                <!-- internationalization -->
+                <section id="i18n">
+                    <h3>Internationalization</h3>
+                    <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th class="header-attr">name</th>
+                            <th class="header-type">type</th>
+                            <th class="header-default">default</th>
+                            <th>description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>playText</td>
+                            <td>string</td>
+                            <td>'play'</td>
+                            <td>Title text for play button.</td>
+                        </tr>
+                        <tr>
+                            <td>pauseText</td>
+                            <td>string</td>
+                            <td>'pause'</td>
+                            <td>Title text for pause button.</td>
+                        </tr>
+                        <tr>
+                            <td>prevText</td>
+                            <td>string</td>
+                            <td>'previous'</td>
+                            <td>Title text for previous button.</td>
+                        </tr>
+                        <tr>
+                            <td>nextText</td>
+                            <td>string</td>
+                            <td>'next'</td>
+                            <td>Title text for next button.</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </section>
+                <br/>
+
+                <!-- Methods -->
+                <section id="methods">
+                    <div class="page-header">
+                        <h2>Methods</h2>
+                    </div>
+                    <p>
+                        Once initialized, the banner rotator provides several methods for use in your javascript code.
+                    </p>
+                </section>
+                
+                <!-- play -->
+                <section id="play-method">
+                    <h3>play</h3>
+                    <p>Play the banner rotator's slide show.</p>
+                    <strong>Code example:</strong>
+                    <p>Invoking the <code>play</code> method:</p>
+<pre class="prettyprint linenums">
+$('#myRotator').bannerRotator('play');
+</pre>
+                </section>
+
+                <!-- pause -->
+                <section id="pause-method">
+                    <h3>pause</h3>
+                    <p>Pause the banner rotator's slide show.</p>
+                    <strong>Code example:</strong>
+                    <p>Invoking the <code>pause</code> method:</p>
+<pre class="prettyprint linenums">
+$('#myRotator').bannerRotator('pause');
+</pre>
+                </section>
+
+                <!-- togglePlay -->
+                <section id="toggle-play-method">
+                    <h3>togglePlay</h3>
+                    <p>Toggle the play state of the banner rotator's slide show.</p>
+                    <strong>Code example:</strong>
+                    <p>Invoking the <code>togglePlay</code> method:</p>
+<pre class="prettyprint linenums">
+$('#myRotator').bannerRotator('togglePlay');
+</pre>
+                </section>
+
+                <!-- prev -->
+                <section id="prev-method">
+                    <h3>prev</h3>
+                    <p>Go to the previous slide.</p>
+                    <strong>Code example:</strong>
+                    <p>Invoking the <code>prev</code> method:</p>
+<pre class="prettyprint linenums">
+$('#myRotator').bannerRotator('prev');
+</pre>
+                </section>
+                
+                <!-- next -->
+                <section id="next-method">
+                    <h3>next</h3>
+                    <p>Go to the next slide.</p>
+                    <strong>Code example:</strong>
+                    <p>Invoking the <code>next</code> method:</p>
+<pre class="prettyprint linenums">
+$('#myRotator').bannerRotator('next');
+</pre>
+                </section>
+
+                <!-- to -->
+                <section id="to-method">
+                    <h3>to</h3>
+                    <p>Go to the slide at the specified index. (index uses zero-based numbering).</p>
+                    <strong>Code example:</strong>
+                    <p>Invoking the <code>to</code> method:</p>
+<pre class="prettyprint linenums">
+//go to slide at index 3
+$('#myRotator').bannerRotator('to', 3);
+</pre>
+                </section>
+
+                <!-- option -->
+                <section id="option-method">
+                    <h3>option</h3>
+                    <p>Get the value associated with the option name.</p>
+                    <strong>Code example:</strong>
+                    <p>Invoking the <code>option</code> method:</p>
+<pre class="prettyprint linenums">
+//get banner rotator's width
+$('#myRotator').bannerRotator('option', 'width');
+</pre>
+                </section>
+
+                <!-- destroy -->
+                <section id="destroy-method">
+                    <h3>destroy</h3>
+                    <p>Remove the banner rotator's functionality completely. This will return the banner rotator's elements back to its pre-initialized state.</p>
+                    <strong>Code example:</strong>
+                    <p>Invoking the <code>destroy</code> method:</p>
+<pre class="prettyprint linenums">
+$('#myRotator').bannerRotator('destroy');
+</pre>
+                </section>
+                <br/>
+
+                <!-- Events -->
+                <section id="events">
+                    <div class="page-header">
+                        <h2>Events</h2>
+                    </div>
+                    <p>
+                        The banner rotator emits several events where you can assign callback functions or bind event listeners to.
+                    </p>
+                </section>
+                    
+                <!-- create event-->
+                <section id="create-event">
+                    <h3>create</h3>
+                    <p>Triggered immediately after the banner rotator is created.</p>
+                    <p><strong>Code Examples:</strong></p>
+                    <p>Initialize the banner rotator with the <code>onCreate</code> callback specified:</p>
+<pre class="prettyprint linenums">
+$('#myRotator').bannerRotator({
+    onCreate: function(extra) {
+        console.log('Banner rotator created.');
+    }
+});
+</pre>
+                    <p>Bind an event listener to the <code>rotatorCreate</code> event:</p>
+<pre class="prettyprint linenums">
+$('#myRotator').on('rotatorCreate', function(event, extra) {
+    console.log('Banner rotator created.');
+});
+</pre>
+                </section>
+                
+                <!-- start event -->
+                <section id="play-event">
+                    <h3>play</h3>
+                    <p>Triggered when the slide show plays.</p>
+                    <p><strong>Code Examples:</strong></p>
+                    <p>Initialize the banner rotator with the <code>onPlay</code> callback specified:</p>
+<pre class="prettyprint linenums">
+$('#myRotator').bannerRotator({
+    onPlay: function(extra) {
+        console.log('Play on slide ' + extra.index);
+    }
+});
+</pre>
+                    <p>Bind an event listener to the <code>rotatorPlay</code> event:</p>
+<pre class="prettyprint linenums">
+$('#myRotator').on('rotatorPlay', function(event, extra) {
+    console.log('Play on slide ' + extra.index);
+});
+</pre>
+                </section>
+                
+                <!-- stop event -->
+                <section id="pause-event">
+                    <h3>pause</h3>
+                    <p>Triggered when the slide show pauses.</p>
+                    <p><strong>Code Examples:</strong></p>
+                    <p>Initialize the banner rotator with the <code>onPause</code> callback specified:</p>
+<pre class="prettyprint linenums">
+$('#myRotator').bannerRotator({
+    onPause: function(extra) {
+        console.log('Pause on slide ' + extra.index);
+    }
+});
+</pre>
+                    <p>Bind an event listener to the <code>rotatorPause</code> event:</p>
+<pre class="prettyprint linenums">
+$('#myRotator').on('rotatorPause', function(event, extra) {
+    console.log('Pause on slide ' + extra.index);
+});
+</pre>
+                </section>
+
+                <!-- prev event -->
+                <section id="prev-event">
+                    <h3>prev</h3>
+                    <p>Triggered when going to the previous slide.</p>
+                    <p><strong>Code Examples:</strong></p>
+                    <p>Initialize the banner rotator with the <code>onPrev</code> callback specified:</p>
+<pre class="prettyprint linenums">
+$('#myRotator').bannerRotator({
+    onPrev: function(extra) {
+        console.log('Current slide at ' + extra.index);
+    }
+});
+</pre>
+                    <p>Bind an event listener to the <code>rotatorPrev</code> event:</p>
+<pre class="prettyprint linenums">
+$('#myRotator').on('rotatorPrev', function(event, extra) {
+    console.log('Current slide at ' + extra.index);
+});
+</pre>
+                </section>
+
+                <!-- next event -->
+                <section id="next-event">
+                    <h3>next</h3>
+                    <p>Triggered when going to the next slide.</p>
+                    <p><strong>Code Examples:</strong></p>
+                    <p>Initialize the banner rotator with the <code>onNext</code> callback specified:</p>
+<pre class="prettyprint linenums">
+$('#myRotator').bannerRotator({
+    onNext: function(extra) {
+        console.log('Current slide at ' + extra.index);
+    }
+});
+</pre>
+                    <p>Bind an event listener to the <code>rotatorNext</code> event:</p>
+<pre class="prettyprint linenums">
+$('#myRotator').on('rotatorNext', function(event, extra) {
+    console.log('Current slide at ' + extra.index);
+});
+</pre>
+                </section>
+
+                <!-- change event -->
+                <section id="change-event">
+                    <h3>change</h3>
+                    <p>Triggered on slide change, before image transition.</p>
+                    <p><strong>Code Examples:</strong></p>
+                    <p>Initialize the banner rotator with the <code>onChange</code> callback specified:</p>
+<pre class="prettyprint linenums">
+$('#myRotator').bannerRotator({
+    onChange: function(extra) {
+        console.log('Slide change to ' + extra.index);
+    }
+});
+</pre>
+                    <p>Bind an event listener to the <code>rotatorChange</code> event:</p>
+<pre class="prettyprint linenums">
+$('#myRotator').on('rotatorChange', function(event, extra) {
+    console.log('Slide change to ' + extra.index);
+});
+</pre>
+                </section>
+
+                <!-- changed event -->
+                <section id="changed-event">
+                    <h3>changed</h3>
+                    <p>Triggered after slide has completed its image transition.</p>
+                    <p><strong>Code Examples:</strong></p>
+                    <p>Initialize the banner rotator with the <code>onChanged</code> callback specified:</p>
+<pre class="prettyprint linenums">
+$('#myRotator').bannerRotator({
+    onChanged: function(extra) {
+        console.log('Slide ' + extra.index + ' transition complete.');
+    }
+});
+</pre>
+                    <p>Bind an event listener to the <code>rotatorChanged</code> event:</p>
+<pre class="prettyprint linenums">
+$('#myRotator').on('rotatorChanged', function(event, extra) {
+    console.log('Slide ' + extra.index + ' transition complete.');
+});
+</pre>
+                </section>
+
+                <!-- load event -->
+                <section id="load-event">
+                    <h3>load</h3>
+                    <p>Triggered immediately after a slide image has been loaded.</p>
+                    <p><strong>Code Examples:</strong></p>
+                    <p>Initialize the banner rotator with the <code>onLoad</code> callback specified:</p>
+<pre class="prettyprint linenums">
+$('#myRotator').bannerRotator({
+    onLoad: function(extra) {
+        console.log('Slide ' + extra.index + ' loaded.');
+    }
+});
+</pre>
+                    <p>Bind an event listener to the <code>rotatorLoad</code> event:</p>
+<pre class="prettyprint linenums">
+$('#myRotator').on('rotatorLoad', function(event, extra) {
+    console.log('Slide ' + extra.index + ' loaded.');
+});
+</pre>
+                </section>
+  	 	   </div>
+   	    </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p class="pull-right">copyright &copy; 2015 webtako</p>
+            <p><a href="http://codecanyon.net/user/webtako" target="_blank">envato</a> / <a href="http://www.twitter.com/webtako" target="_blank">twitter</a></p>
+        </div>
+    </footer>
+</body>
+</html>

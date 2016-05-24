@@ -1,0 +1,164 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.evento {
+	 height:auto;
+	 position:relative;
+}
+#topimg {
+	width:100%;
+	height:auto;
+}
+
+/* CSS Document -------------------------------------- */
+#contenido {
+	width:100%;
+	position:relative;
+		margin-top:50px;
+	}
+    .econten {
+		position:relative;
+		width:302px;
+		height:auto;
+	}
+	.econten p{
+		text-align: center;
+	}
+	.econten p.tema {
+		margin:0;
+		font-size:15px;
+		font-family:'Trajan Pro';
+		text-align:center;
+	}
+	.econten p.orador {
+		text-align:center;
+	}
+	.eimages {
+		width:302px;
+		height:140px;
+		border-bottom:3px solid;
+	}
+	.eimagen1 {
+		position:absolute;
+		z-index:-1;
+		width:302px;
+		height:140px;
+	}
+	.eimagen2 {
+		position:absolute;
+		width:302px;
+		height:140px;
+	}
+	.efecha {
+		float:left;
+		width:80px;
+		height:50px;
+	}
+	.efecha p{
+		text-align:right;
+		font-family:'Trajan Pro';
+		color:rgba(255,255,255,1.00);
+	}
+	.efecha p.mes {
+		margin:2px 5px;
+		font-size:15px;
+	}
+	.efecha p.dia {
+		margin:0 5px;
+		font-size:23px;
+	}
+	.etitulo {
+		float:left;
+		width:222px;
+		height:47px;
+		border-bottom:3px solid rgba(226,224,225,1.00);
+	}
+	.etitulo p.titulo{
+		margin:8% auto; text-align:center; font-size:13px;
+	}
+	
+	
+/* CSS Document -------------------------------------- */
+
+@media (min-width: 1px) and (max-width: 639px){
+	#social {
+		width:639px; height:36px;
+	}
+	#contenedor {
+		width:100%;
+		overflow:hidden;
+	}
+	#topimg {
+		width:160%;
+		height:auto;
+	}
+	#contenido {
+		margin-top:25px;
+	}
+	.separador {
+		visibility:hidden;
+	}
+	.econten {
+		margin:0 auto 40px auto;
+	}
+}
+
+@media (min-width: 640px) and (max-width: 768px){
+	#social {
+		width:639px; height:36px;
+	}
+	#contenedor {
+		width:100%;
+		overflow:hidden;
+	}
+	#topimg {
+		width:160%;
+		height:auto;
+	}
+	#contenido {
+		margin:25px auto 0 auto;
+		width:630px;
+	}
+	.separador {
+		width:26px;
+		float:left;
+		overflow:hidden;
+	}
+	.separador2 {
+		clear:both;
+	}
+	.econten {
+		float:left;
+		margin:0 auto 40px auto;
+	}
+	.compartir1 {
+		display:none;
+	}
+}
+
+@media (min-width: 769px){
+	#social {
+		width:1280px; height:36px;
+	}
+	#topimg {
+		width:100%;
+		height:auto;
+	}
+	.econten {
+		float:left;
+		margin:0 auto 50px auto;
+	}
+	.separador {
+		width:24px;
+		float:left;
+		overflow:hidden;
+	}
+	.separador2 {
+		width:24px;
+		float:left;
+		overflow:hidden;
+	}
+	.compartir1 {
+		display:none;
+	}
+}

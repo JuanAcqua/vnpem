@@ -1,0 +1,195 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.evento {
+	 height:auto;
+	 position:relative;
+}
+
+@media only screen and (width:320px) {
+	.efecha p.mes {
+		font-size:80%;
+	}
+	.efecha p.dia {
+		font-size:140%;
+	}
+	.etitulo p.titulo {
+		font-size:72%;
+	}
+}
+@media only screen and (width:360px) {
+	.efecha p.mes {
+		font-size:95%;
+	}
+	.efecha p.dia {
+		font-size:155%;
+	}
+	.etitulo p.titulo {
+		font-size:80%;
+	}
+}
+@media only screen and (width:414px) {
+	.efecha p.mes {
+		font-size:105%;
+	}
+	.efecha p.dia {
+		font-size:180%;
+	}
+	.etitulo p.titulo {
+		font-size:100%;
+	}
+}
+@media only screen and (max-width:640px) {
+    #contenedor {
+		position:relative;
+		width:100%;
+		height:auto;
+		margin:auto;
+		overflow:hidden;
+	}
+	#contenido {
+		margin-top:15%;
+	}
+	.econten {
+		position:relative;
+		width:90%;
+		height:auto;
+		margin:0 auto 80px auto;
+	}
+	.econten p{
+		font-size:22px;
+		text-align:justify;
+		margin-top:0;
+	}
+	.econten p.tema {
+		margin:2px 5px;
+		font-size:32px;
+		font-family:'Trajan Pro';
+		text-align:center;
+	}
+	.econten p.orador {
+		text-align:center;
+	}
+	.eimages {
+		position:relative;
+		width:100%;
+		height:auto;
+		overflow:hidden;
+	}
+	.eimagen1 {
+		width:100%;
+		height:auto;
+		margin:0;
+	}
+	.eimagen2 {
+		position: absolute;
+		width: 100%;
+		height: auto;
+	}
+	.efecha {
+		position:relative;
+		width:27%;
+		height:auto;
+		margin:0;
+		float:left;
+	}
+	.efecha p{
+		text-align:right;
+		font-family:'Trajan Pro';
+		color:rgba(255,255,255,1.00);
+	}
+	.efecha p.mes {
+		margin:2% 8%;
+	}
+	.efecha p.dia {
+		margin:0 7%;
+	}
+	.etitulo {
+		width:73%;
+		height:auto;
+		border-bottom:3px solid rgba(226,224,225,1.00);
+		float:left;
+	}
+	.etitulo p.titulo {
+		margin:7.3% auto;
+		text-align:center;
+	}
+	.separador {
+		visibility:hidden;
+	}
+}
+
+/* CSS Document -------------------------------------- */
+#contenido {
+		margin-top:50px;
+	}
+    .econten {
+		position:relative;
+		width:302px;
+		height:auto;
+		float:left;
+		margin:0 auto 50px auto;
+	}
+	.econten p{
+		font-size:14px;
+		font-family:'Helvetica Neue Light';
+		text-align:justify;
+		margin-top:0;
+	}
+	.econten p.tema {
+		margin:0;
+		font-size:15px;
+		font-family:'Trajan Pro';
+		text-align:center;
+	}
+	.econten p.orador {
+		text-align:center;
+	}
+	.eimages {
+		width:302px;
+		height:140px;
+		border-bottom:3px solid;
+	}
+	.eimagen1 {
+		position:absolute;
+		z-index:-1;
+		width:302px;
+		height:140px;
+	}
+	.eimagen2 {
+		position:absolute;
+		width:302px;
+		height:140px;
+	}
+	.efecha {
+		float:left;
+		width:80px;
+		height:50px;
+	}
+	.efecha p{
+		text-align:right;
+		font-family:'Trajan Pro';
+		color:rgba(255,255,255,1.00);
+	}
+	.efecha p.mes {
+		margin:2px 5px;
+		font-size:15px;
+	}
+	.efecha p.dia {
+		margin:0 5px;
+		font-size:23px;
+	}
+	.etitulo {
+		float:left;
+		width:222px;
+		height:47px;
+		border-bottom:3px solid rgba(226,224,225,1.00);
+	}
+	.etitulo p.titulo{
+		margin:8% auto; text-align:center; font-size:13px;
+	}
+	.separador {
+		width:24px;
+		float:left;
+		overflow:hidden;
+	}

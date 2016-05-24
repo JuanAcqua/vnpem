@@ -1,0 +1,139 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* ============================================================
+  BASE OVERRIDES
+
+  Use this to make sure max width of wrapper is also max
+  video width in demo 3.
+============================================================ */
+.wrapper.demo3 {
+  max-width: 444px;
+}
+
+/* ============================================================
+  DEMO 3 - BACKGROUND VIDEO
+============================================================ */
+#cmn-video-demo3__container {
+  position: relative;
+  margin: 0 0 20px 0;
+  height: 250px;
+  background-color: #282828;
+  overflow: hidden;
+}
+
+#cmn-video-demo3__video {
+  position: absolute;
+  top:0%;
+  left:0%;
+  z-index: 1;
+  width: 444px;
+  height: auto;
+}
+
+#cmn-video-demo3__content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  padding: 80px 20px;
+  text-align: center;
+}
+#cmn-video-demo3__content h2,
+#cmn-video-demo3__content p,
+#cmn-video-demo3__content a {
+  color: #fff;
+  text-shadow: -1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+#cmn-video-demo3__content h2 {
+  font-family: "Roboto Slab", serif;
+  font-size: 30px;
+}
+#cmn-video-demo3__content p {
+  margin-bottom: 40px;
+}
+#cmn-video-demo3__content a {
+  display: inline-block;
+  margin: 0;
+  padding: 10px 20px;
+  font-family: "Roboto Slab", serif;
+  border: solid 1px #fff;
+  transition: background 0.3s, color 0.3s, text-shadow 0.3s;
+}
+#cmn-video-demo3__content a:hover {
+  background-color: #fff;
+  color: #787878;
+  text-shadow: none;
+}
+
+@media all and (min-width: 600px) {
+  #cmn-video-demo3__container {
+    height: 250px;
+  }
+
+  #cmn-video-demo3__video {
+    width: 444px;
+  }
+
+  #cmn-video-demo3__content {
+    
+  }
+  #cmn-video-demo3__content h2 {
+    font-size: 42px;
+  }
+  #cmn-video-demo3__content p,
+  #cmn-video-demo3__content a {
+    font-size: 18px;
+  }
+}
+@media all and (min-width: 1024px) {
+  #cmn-video-demo3__container {
+    height: 250px;
+  }
+
+  #cmn-video-demo3__video {
+    width: 444px;
+  }
+
+  #cmn-video-demo3__content {
+    
+  }
+  #cmn-video-demo3__content h2 {
+    font-size: 54px;
+  }
+  #cmn-video-demo3__content p,
+  #cmn-video-demo3__content a {
+    font-size: 24px;
+  }
+}
+
+#cmn-video-demo3__controls {
+  position: absolute;
+  top:90%;
+  left:67%;
+}
+#cmn-video-demo3__controls button {
+  display: inline-block;
+  margin: 0;
+  padding: 5px 15px;
+  background-color: tomato;
+  color: #fff;
+  font-family: "Roboto Slab", serif;
+  font-size: 12px;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}

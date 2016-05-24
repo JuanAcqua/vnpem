@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Help Guide</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="css/help.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/prettify.min.js"></script>
+    <script src="js/bootstrap-scrollspy.min.js"></script>
+</head>
+<body onload="prettyPrint()" data-spy="scroll" data-target="#side-menu">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <ul class="nav">
+                    <li class="active">
+                        <a href="help.html">Setup</a>
+                    </li>
+                    <li>
+                        <a href="api.html">API</a>
+                    </li>
+                    <li>
+                        <a href="appendix.html">Appendix</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container content">
+        <div class="row">
+            <div class="span3">
+                <div id="side-menu" class="well affix">
+                    <ul class="nav nav-list">
+                        <li class="nav-header">Setup</li>
+                        <li>
+                            <a href="#install">Install</a>
+                        </li>
+                        <li>
+                            <a href="#markup">Html Markup</a>
+                        </li>
+                        <li>
+                            <a href="#init">Initialize</a>
+                        </li>
+                        <li>
+                            <a href="#options">Setting Options</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#style-class">Style Class</a>
+                        </li>
+                        <li>
+                            <a href="#images">Images</a>
+                        </li>
+                        <li>
+                            <a href="#thumbs">Thumbnails</a>
+                        </li>
+                        <li>
+                            <a href="#tooltip">Tooltip</a>
+                        </li>
+                        <li>
+                            <a href="#nav-thumbs">Navigation Thumbs</a>
+                        </li>
+                        <li>
+                            <a href="#links">Links</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#transition">Image Transition</a>
+                        </li>
+                        <li>
+                            <a href="#advance-transition">Advance Transition</a>
+                        </li>
+                        <li>
+                            <a href="#ken-burns">Ken Burns</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#layers">Layers</a>
+                        </li>
+                        <li>
+                            <a href="#layer-style">Layer Style</a>
+                        </li>
+                        <li>
+                            <a href="#layer-in">Layer Transition</a>
+                        </li>
+                        <li>
+                            <a href="#layer-out">Layer Transition Out</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="span9">
+                <div class="hero-unit">
+                    <h1>jQuery Banner Rotator</h1>
+                    <h2><span class="muted">Setup</span></h2>
+                </div>
+            
+                <!-- Install -->
+                <section id="install">
+                    <div class="page-header">
+                        <h2>Install</h2>
+                    </div>
+                    <p>
+                        To install the banner rotator,
+                        first add the banner rotator's style sheet inside the <code>&lt;head&gt;</code> tag:
+                    </p>
+<pre class="prettyprint linenums">
+&lt;link href="css/banner-rotator.css" rel="stylesheet"&gt;
+</pre>
+                    <p>Then, add the jQuery and banner rotator javascript files:</p>
+<pre class="prettyprint linenums">
+&lt;script src="js/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/jquery.banner-rotator.min.js"&gt;&lt;/script&gt;
+</pre>
+                    <p>Once you've included the necessary files, the next step is to add the <a href="#markup">html markup</a> for the banner rotator.</p>
+                </section>
+
+                <!-- markup -->
+                <section id="markup">
+                    <div class="page-header">
+                        <h2>Html Markup</h2>
+                    </div>
+                    <p>The banner rotator's markup is very simple and consists of a <code>&lt;div&gt;</code> tag containing a list of images:</p>
+<pre class="prettyprint linenums">
+&lt;div id="myRotator" class="banner-rotator"&gt;
+    &lt;ul class="slides"&gt;
+        &lt;li&gt;
+            &lt;img src="images/photo1.jpg"/&gt;
+        &lt;/li&gt;
+        &lt;li&gt; 
+            &lt;img src="images/photo2.jpg"/&gt;
+        &lt;/li&gt;
+        &lt;li&gt; 
+            &lt;img src="images/photo3.jpg"/&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+                    <p>
+                        First, the container <code>&lt;div&gt;</code> tag should have <code>class="banner-rotator"</code> and an <code>id</code> of your choice.
+                        For the example, we use <code>myRotator</code> as the <code>id</code>.
+                        Then, within the <code>&lt;div&gt;</code> tag, there should be an <code>&lt;ul&gt;</code> tag with <code>class="slides"</code>.
+                        This <code>&lt;ul&gt;</code> tag holds all the <code>&lt;li&gt;</code> tag, with each <code>&lt;li&gt;</code> representing an individual slide.
+                        In addition, each <code>&lt;li&gt;</code> tag should contain an <code>&lt;img&gt;</code> tag.
+                    </p>
+                </section>
+                
+                <!-- initialize -->
+                <section id="init">
+                    <div class="page-header">
+                        <h2>Initialize</h2>
+                    </div>
+                    <p>
+                        After the <a href="#markup">markup</a> is created, the last step is to initialize the banner rotator 
+                        using the <code>.bannerRotator()</code> function:
+                    </p>
+<pre class="prettyprint linenums">
+&lt;script&gt;
+$(window).load(function() {
+    $('#myRotator').bannerRotator();
+});
+&lt;/script&gt;
+</pre>
+                    <p>
+                        When using this function, it should reference the <code>id</code> of the markup we created earlier.
+                        Also, make sure the function is called inside <code>$(window).load()</code> so that the page is ready for
+                        initialization.
+                    </p>
+                </section>
+
+                <!-- options -->
+                <section id="options">
+                    <h3>Setting Options</h3>
+                    <p>
+                        Additionally, you can customize the settings of the banner rotator by passing in options to the <code>.bannerRotator()</code> function.
+                        There are many options available, please refer to <a href="api.html#options">options</a> for the full list.
+                    </p>
+                    <strong>Example:</strong>
+                    <p>Initialize the banner rotator with the width and height options specified:</p>
+<pre class="prettyprint linenums">
+&lt;script&gt;
+$(window).load(function() {
+    $('#myRotator').bannerRotator({
+        width:1200,
+        height:400
+    });
+});
+&lt;/script&gt;
+</pre>
+                    <p>
+                        If an option is not passed into the function, then a default value is used instead.
+                    </p>
+                    <p>
+                        Your banner rotator's basic setup is now complete, follow the rest of this guide for more 
+                        customization instructions for the banner rotator.
+                    </p>
+                </section>
+
+
+                <!-- style class -->
+                <section id="style-class">
+                    <div class="page-header">
+                        <h2>Style Class</h2>
+                    </div>
+                    <p>
+                        The banner rotator has several classes for customizing its style.
+                        When using a style class, it should be set to the banner rotator's containing <code>&lt;div&gt;</code> tag.
+                        (See <a href="appendix.html#style-class">style class</a> for all available classes.)
+                    </p>
+                    <p><strong>Example:</strong></p>
+                    <p>Using the <code>shadow</code> class.</p>
+<pre class="prettyprint linenums">
+&lt;div id="myRotator" class="banner-rotator shadow"&gt;
+    &lt;ul class="slides"&gt;
+        ...
+    &lt;/ul&gt;
+&lt;/div&gt;
+</pre> 
+                </section>
+
+                <!-- images -->
+                <section id="images">
+                    <div class="page-header">
+                        <h2>Images</h2>
+                    </div>
+                    <p>
+                        To add an image to the banner rotator, simply insert an <code>&lt;img&gt;</code> tag within the slide's <code>&lt;li&gt;</code> tag:
+                    </p>
+<pre class="prettyprint linenums">
+&lt;li&gt;
+    &lt;img src="images/photo.jpg"/&gt;
+&lt;/li&gt;
+</pre>
+                    <p>You can also use lazy loading for the image by using the <code>data-src</code> attribute instead:</p>
+<pre class="prettyprint linenums">
+&lt;li&gt;
+    &lt;img data-src="images/photo.jpg"/&gt;
+&lt;/li&gt;
+</pre>
+                    <p>Lazy Loading can help to reduce the initial download time by delaying loading until needed.</p>
+                </section>
+
+                <!-- thumbnail -->
+                <section id="thumbs">
+                    <div class="page-header">
+                        <h2>Thumbnails</h2>
+                    </div>
+                    <p>You can add and customize text and image thumbnails for the banner rotator.</p>
+                </section>
+
+                <!-- text thumb -->
+                <section>
+                    <h3>Text Thumbs</h3>
+                    <p>
+                        To add text for the thumbnail, use the <code>title</code> attribute for the 
+                        <code>&lt;img&gt;</code> tag.
+                    </p>
+                    <p><strong>Example:</strong></p>
+<pre class="prettyprint linenums">
+&lt;li&gt;
+    &lt;img src="images/photo.jpg" title="my photo"/&gt;
+&lt;/li&gt;
+</pre>
+                    <p>
+                        Note that the option <code>thumbnail</code> should be set to <code>'text'</code> during <a href="#options">initialization</a> to enable text thumbnails.
+                        (See <a href="api.html#control">control elements</a> options for more info).
+                    </p>
+                </section>
+
+                <!-- image thumb -->
+                <section>
+                    <h3>Image Thumbs</h3>
+                    <p>
+                        By default, the thumbnail will use the main image as the thumbnail image.
+                        However, you can set a different thumbnail image by 
+                        using the <code>data-thumb</code> attribute for the <code>&lt;img&gt;</code> tag.
+                    </p>
+                    <p><strong>Example:</strong></p>
+<pre class="prettyprint linenums">
+&lt;li&gt;
+    &lt;img src="images/photo.jpg" data-thumb="images/thumb.jpg"/&gt;
+&lt;/li&gt;
+</pre>
+                    <p>
+                        Note that the option <code>thumbnail</code> should be set to <code>'image'</code> during <a href="#options">initialization</a> to enable image thumbnails.
+                        (See <a href="api.html#control">control elements</a> options for more info).
+                    </p>
+                </section>
+
+                <!-- tooltip -->
+                <section id="tooltip">
+                    <div class="page-header">
+                        <h2>Tooltip</h2>
+                    </div>
+                    <p>You can add and customize text and image tooltips for the banner rotator.</p>
+                </section>
+
+                <!-- text tooltip -->
+                <section>
+                    <h3>Text Tooltip</h3>
+                    <p>
+                        By default, the tooltip will use the thumbnail's text also as its tooltip text.
+                        However, you can set a different tooltip text by inserting the text inside 
+                        a tag with class <code>tooltip</code>.
+                    </p>
+                    <p><strong>Example:</strong></p>
+<pre class="prettyprint linenums">
+&lt;li&gt;
+    &lt;img src="images/photo.jpg"/&gt;
+    &lt;span class="tooltip"&gt;
+        lorem ipsum
+    &lt;/span&gt;
+&lt;/li&gt;
+</pre>
+                </section>
+
+                <!-- image tooltip -->
+                <section>
+                    <h3>Image Tooltip</h3>
+                    <p>
+                        By default, the tooltip will use the thumbnail's image also as its tooltip image.
+                        However, you can set a different tooltip image by 
+                        using the <code>data-tooltip</code> attribute for the <code>&lt;img&gt;</code> tag.
+                    </p>
+                    <p><strong>Example:</strong></p>
+<pre class="prettyprint linenums">
+&lt;li&gt;
+    &lt;img src="images/photo.jpg" data-tooltip="images/tooltip.jpg"/&gt;
+&lt;/li&gt;
+</pre>
+                    <p>
+                        Note that the option <code>tooltip</code> should be set to <code>'image'</code> during <a href="#options">initialization</a> to enable image tooltips.
+                        (See <a href="api.html#control">control elements</a> options for more info).
+                    </p>
+                </section>
+
+                <!-- preview thumbs -->
+                <section id="nav-thumbs">
+                    <h2>Navigation Thumbs</h2>
+                    <p>
+                        The banner rotator can display a preview thumbnail when hovering over the side navigation buttons.
+                        By default, this thumbnail will use the main image as the thumbnail image.
+                        However, you can set a different image by using the <code>data-nav-thumb</code> attribute for the <code>&lt;img&gt;</code> tag.
+                    </p>
+                    <p><strong>Example:</strong></p>
+<pre class="prettyprint linenums">
+&lt;li&gt;
+    &lt;img src="images/photo.jpg" data-nav-thumb="images/navthumb.jpg"/&gt;
+&lt;/li&gt;
+</pre>
+                    <p>
+                        Note that the option <code>navThumbs</code> should be set to <code>true</code> during <a href="#options">initialization</a> to enable navigation thumbs.
+                        (See <a href="api.html#control">control elements</a> options for more info).
+                    </p>
+                </section>
+
+                <!-- links -->
+                <section id="links">
+                    <div class="page-header">
+                        <h2>Links</h2>
+                    </div>
+                    <p>To add a link for a slide, simply wrap the <code>&lt;img&gt;</code> tag with an <code>&lt;a&gt;</code> tag.</p>
+                    <p><strong>Example:</strong></p>
+<pre class="prettyprint linenums">
+&lt;li&gt;
+    &lt;a href="http://www.google.com" target="_blank"&gt;&lt;img src="images/photo.jpg"/&gt;&lt;/a&gt;
+&lt;/li&gt;
+</pre>
+                </section>
+
+
+                <!-- transition -->
+                <section id="transition">
+                    <div class="page-header">
+                        <h2>Image Transition</h2>
+                    </div>
+                    <p>
+                        You can customize the transition effect of an individual slide by using the following <code>data-*</code> attributes for the slide's <code>&lt;li&gt;</code> tag:
+                    </p>
+                    <ul>
+                        <li>
+                            <code>data-effect</code> - the transition effect. (see <a href="appendix.html#effects">image effects</a> for available effects).
+                        </li>
+                        <li>
+                            <code>data-duration</code> - the duration of the transition effect, in milliseconds.
+                        </li>
+                        <li>
+                            <code>data-easing</code> - the easing of the transition effect.
+                        </li>
+                        <li>
+                            <code>data-delay</code> - the slide change delay, in milliseconds.
+                        </li>
+                    </ul>
+                    <br/>
+                    <p><strong>Examples:</strong></p>
+<pre class="prettyprint linenums">
+&lt;li data-effect="fade" data-duration="500" data-easing="ease" data-delay="5000"&gt;
+    &lt;img src="images/photo.jpg"/&gt;
+&lt;/li&gt;
+</pre>
+                    <p>Alternatively, you can use the shorthand attribute <code>data-transition</code> to set all four values at once:</p>
+<pre class="prettyprint linenums">
+&lt;li data-transition="fade 500 ease 5000"&gt;
+    &lt;img src="images/photo.jpg"/&gt;
+&lt;/li&gt;
+</pre>
+                    <p>
+                        The values set for an individual slide will override any corresponding values set in <a href="#options">initialization</a>.
+                        Please see <a href="api.html#transition">transition</a> options for more info.
+                    </p>
+                </section>
+        
+                <!-- advance transition -->
+                <section id="advance-transition">
+                    <h3>Advance Transition</h3>
+                    <p>
+                        A transition effect can be customized further by 
+                        using the following <code>data-*</code> attributes for the slide's <code>&lt;li&gt;</code> tag:
+                    </p>
+                    <ul>
+                        <li>
+                            <code>data-direction</code> - the direction of the effect. 
+                            (used only for <a href="appendix.html#effects">directional effects</a>).
+                        </li>
+                        <li>
+                            <code>data-columns</code> - the number of columns the effect consists of.
+                        </li>
+                        <li>
+                            <code>data-rows</code> - the number of rows the effect consists of.
+                        </li>
+                        <li>
+                            <code>data-interval</code> - the start delay between the pieces in the effect, in milliseconds. (used only for effects divided into multiple rows or columns).
+                        </li>
+                        <li>
+                            <code>data-order</code> - the starting order of the pieces in the effect.
+                            (used only for effects divided into multiple rows or columns, see <a href="appendix.html#order">orders</a> for available values).
+                        </li>
+                        <li>
+                            <code>data-alternate</code> - if pieces in the effect alternate in effect directions. 
+                            (used only for <a href="appendix.html#effects">directional effects</a> divided into multiple rows or columns).
+                        </li>
+                        <li>
+                            <code>data-depth</code> - the z offset for 3D effects.
+                        </li>
+                        <li>
+                            <code>data-shape-shading</code> - if shading is used for 3D effects.
+                        </li>
+                        <li>
+                            <code>data-shape-color</code> - the background color of shapes.
+                        </li>
+                        <li>
+                            <code>data-shape-depth</code> - the depth (thickness) of shapes. (used only for <code>'flip'</code> effect).
+                        </li>
+                    </ul>
+                    <br/>
+                    <p><strong>Example:</strong></p>
+<pre class="prettyprint linenums">
+&lt;li data-effect="rotate" data-columns="6" data-direction="down" data-order="right" data-alternate="true"&gt;
+    &lt;img src="images/photo.jpg"/&gt;
+&lt;/li&gt;
+</pre>
+                    <p>
+                        The values set for an individual slide will override any corresponding values set in <a href="#options">initialization</a>.
+                        Please see <a href="api.html#transition">transition</a> options for more info.
+                    </p>
+                </section>
+
+                <!-- Ken Burns effect -->
+                <section id="ken-burns">
+                    <h3>Ken Burns</h3>
+                    <p>
+                        An image can have a Ken Burns effect that starts during the slide show.
+                        To configure the Ken Burns effect, use the following <code>data-*</code> attributes for the slide's <code>&lt;li&gt;</code> tag:
+                    </p>
+                    <ul>
+                        <li>
+                            <code>data-kb-effect</code> - the Ken Burns effect. 
+                            (see <a href="appendix.html#ken-burns">Ken Burns</a> for available effects).
+                        </li>
+                        <li>
+                            <code>data-kb-duration</code> - the duration of the Ken Burns effect, in milliseconds. Set value to <code>"auto"</code> to match slide show's delay time.
+                        </li>
+                        <li>
+                            <code>data-kb-easing</code> - the easing of the Ken Burns effect.
+                        </li>
+                    </ul>
+                    <br/>
+                    <p><strong>Examples:</strong></p>
+<pre class="prettyprint linenums">
+&lt;li data-kb-effect="zoomIn" data-kb-duration="auto" data-kb-easing="linear"&gt;
+    &lt;img src="images/photo.jpg"/&gt;
+&lt;/li&gt;
+</pre>
+                    <p>Alternatively, you can use the shorthand attribute <code>data-ken-burns</code> to set all three values at once:</p>
+<pre class="prettyprint linenums">
+&lt;li data-ken-burns="zoomIn auto linear"&gt;
+    &lt;img src="images/photo.jpg"/&gt;
+&lt;/li&gt;
+</pre>
+                    <p>
+                        The values set for an individual slide will override any corresponding values set in <a href="#options">initialization</a>.
+                        Please see <a href="api.html#kb">Ken Burns</a> options for more info.
+                    </p>
+                </section>
+
+                <!-- layers -->
+                <section id="layers">
+                    <div class="page-header">
+                        <h2>Layers</h2>
+                    </div>
+                    <p>
+                        You can add text and html layers on top of each slide.
+                        To add a layer, insert a tag with its content inside the slide's <code>&lt;li&gt;</code> tag.
+                        You can use almost any tags such as <code>&lt;span&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>, etc.
+                    </p>
+                    <strong>Examples:</strong>
+                    <p>Adding a layer:</p>
+<pre class="prettyprint linenums">
+&lt;li&gt;
+    &lt;img src="images/photo.jpg"/&gt;
+    &lt;h1&gt;
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Sed convallis justo arcu. Fusce adipiscing condimentum aliquam.
+    &lt;/h1&gt;
+&lt;/li&gt;
+</pre>
+                    <p>Adding multiple layers:</p>
+<pre class="prettyprint linenums">
+&lt;li&gt;
+    &lt;img src="images/photo.jpg"/&gt;
+    &lt;!-- Layer 1 --&gt;
+    &lt;h1&gt;
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Sed convallis justo arcu. Fusce adipiscing condimentum aliquam.
+    &lt;/h1&gt;
+    &lt;!-- Layer 2 --&gt;
+    &lt;div&gt;
+        Quisque ultrices, dui a pellentesque blandit, nisl velit posuere enim.
+        Nulla commodo urna non velit venenatis id aliquet lorem tincidunt.
+    &lt;/div&gt;
+    &lt;!-- Layer 3 --&gt;
+    &lt;p&gt;
+        Fusce fringilla cursus purus dignissim elementum.  
+        Phasellus vehicula ligula eu justo tempus eget adipiscing justo porttitor.
+    &lt;/p&gt;
+&lt;/li&gt;
+</pre>
+                </section>
+                    
+                <!-- layer style -->
+                <section id="layer-style">
+                    <h3>Layer Style</h3>
+                    <p>
+                        You can adjust the style of the layer by setting the properties for the <code>style</code> attribute.
+                    </p>
+                    <p><strong>Example:</strong></p>
+<pre class="prettyprint linenums">
+&lt;li&gt;
+    &lt;img src="images/photo.jpg"/&gt;
+    &lt;h1 style="top:10px; left:25px; width:300px; height:auto; padding:5px; background-color:#00f;"&gt;
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Sed convallis justo arcu. Fusce adipiscing condimentum aliquam.
+    &lt;/h1&gt;
+&lt;/li&gt;
+</pre>
+                    <p>Some useful style include:</p>
+                    <ul>
+                        <li><code>top</code> - the top position of the layer.</li>
+                        <li><code>left</code> - the left position of the layer.</li>
+                        <li><code>bottom</code> - the bottom position of the layer.</li>
+                        <li><code>right</code> - the right position of the layer.</li>
+                        <li><code>width</code> - the width of the layer. (Use <code>auto</code> for auto width.)</li>
+                        <li><code>height</code> - the height of the layer. (Use <code>auto</code> for auto height.)</li>
+                        <li><code>padding</code> - the padding of the layer.</li>
+                        <li><code>border</code> - the border of the layer.</li>
+                        <li><code>font-size</code> - the font size.</li>
+                        <li><code>color</code> - the text color.</li>
+                        <li><code>background-color</code> - the background color.</li>
+                    </ul>
+                </section>
+                
+                <!-- layer transition in -->
+                <section id="layer-in">
+                    <h3>Layer Transition</h3>
+                    <p>
+                        Each layer can have a transition effect when coming into view.
+                        You can customize the transition effect by setting the following <code>data-*</code> attributes for the layer tag:
+                    </p>
+                    <ul>
+                        <li><code>data-effect</code> - the layer's transition effect. (see <a href="appendix.html#layer-effects">layer effects</a> for available effects).</li>
+                        <li><code>data-duration</code> - the duration of the transition effect, in milliseconds.</li>
+                        <li><code>data-easing</code> - the easing of the transition effect.</li>
+                        <li><code>data-delay</code> -  the transition effect's start delay, in milliseconds.</li>
+                    </ul>
+                    <br/>
+                    <p><strong>Examples:</strong></p>
+<pre class="prettyprint linenums">
+&lt;li&gt;
+    &lt;img src="images/photo.jpg"/&gt;
+    &lt;h1 data-effect="fade" data-duration="500" data-easing="ease" data-delay="100"&gt;
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Sed convallis justo arcu. Fusce adipiscing condimentum aliquam.
+    &lt;/h1&gt;
+&lt;/li&gt;
+</pre> 
+                        <p>Alternatively, you can use the shorthand attribute <code>data-transition</code> to set all four values at once:</p>
+<pre class="prettyprint linenums">
+&lt;li&gt;
+    &lt;img src="images/photo.jpg"/&gt;
+    &lt;h1 data-transition="fade 500 ease 100"&gt;
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Sed convallis justo arcu. Fusce adipiscing condimentum aliquam.
+    &lt;/h1&gt;
+&lt;/li&gt;
+</pre>
+                    <p>
+                        The values set for an individual layer will override any corresponding values set in <a href="#options">initialization</a>.
+                        Please see <a href="api.html#layer">layer</a> options for more info.
+                    </p>
+                </section>
+    
+                <!-- layer transition out -->
+                <section id="layer-out">
+                    <h3>Layer Transition Out</h3>
+                    <p>
+                        Each layer can have a transition out effect when hiding from view.
+                        You can customize the transition out effect by setting the following <code>data-*</code> attributes for the layer tag:
+                    </p>
+                    <ul>
+                        <li><code>data-effect-out</code> - the layer's transition out effect. (see <a href="appendix.html#layer-effects">layer effects</a> for available effects)</li>
+                        <li><code>data-duration-out</code> - the duration of the transition out effect, in milliseconds.</li>
+                        <li><code>data-easing-out</code> - the easing of the transition out effect.</li>
+                        <li><code>data-delay-out</code> -  the transition out effect's start delay, in milliseconds.</li>
+                    </ul>
+                    <br/>
+                    <p><strong>Examples:</strong></p>
+<pre class="prettyprint linenums">
+&lt;li&gt;
+    &lt;img src="images/photo.jpg"/&gt;
+    &lt;h1 data-effect-out="slideUp" data-duration-out="500" data-easing-out="linear" data-delay-out="1500"&gt;
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Sed convallis justo arcu. Fusce adipiscing condimentum aliquam.
+    &lt;/h1&gt;
+&lt;/li&gt;
+</pre>
+                        <p>Alternatively, you can use the shorthand attribute <code>data-transition-out</code> to set all four values at once:</p>
+<pre class="prettyprint linenums">
+&lt;li&gt;
+    &lt;img src="images/photo.jpg"/&gt;
+    &lt;h1 data-transition-out="slideUp 500 linear 1500"&gt;
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Sed convallis justo arcu. Fusce adipiscing condimentum aliquam.
+    &lt;/h1&gt;
+&lt;/li&gt;
+</pre>
+                    <p>
+                        The values set for an individual layer will override any corresponding values set in <a href="#options">initialization</a>.
+                        Please see <a href="api.html#layer">layer</a> options for more info.
+                    </p>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p class="pull-right">copyright &copy; 2015 webtako</p>
+            <p><a href="http://codecanyon.net/user/webtako" target="_blank">envato</a> / <a href="http://www.twitter.com/webtako" target="_blank">twitter</a></p>
+        </div>
+    </footer>
+</body>
+</html>

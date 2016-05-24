@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'BankGothic Lt BT Light';
+  src: url('BankGothic Lt BT Light.eot');
+  src: url('BankGothic Lt BT Light.eot?#iefix') format('embedded-opentype'),
+       url('BankGothic Lt BT Light.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BankGothicBT-Light';
+  src: url('BankGothicBT-Light.woff') format('woff'),
+       url('BankGothicBT-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
