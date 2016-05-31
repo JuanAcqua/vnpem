@@ -11,20 +11,28 @@
     <script src="./scripts/px/parallax.min.js"></script>
     <title>Vida Nueva para el Mundo</title>
     <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href="css/responsive.css" rel="stylesheet" type="text/css">
     <link href="scripts/br/css/banner-rotator.css" rel="stylesheet">
     <link href="scripts/sb-3/shadowbox.css" rel="stylesheet" type="text/css">
     <link href="app/css/style.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-sclae=1.0">
 
 </head>
 <body>
 <!--CONTENEDOR-->
 <div id="contenedor">
   <!--MENU-->
-  <div style="width:1280px; height:36px; overflow:hidden;"><iframe width="1280" height="36" scrolling="no" frameborder="0" src="main/countdown.html"></iframe></div>
-  <div style="width:1280px; height:140px;"><iframe width="1280" height="140" scrolling="no" frameborder="0" src="main/menu.html"></iframe></div>
+    <div id="livestream">
+        <iframe id="livestream-bar" scrolling="no" frameborder="0" src="main/countdown.html"></iframe>
+    </div>
+
+    <iframe id="main-menu" scrolling="no" frameborder="0" src="main/menu.html"></iframe>
+
   <div style="width:1280px; height:36px;"><iframe width="1280" height="36" scrolling="no" frameborder="0" src="main/social_networks.html"></iframe></div>
   <!--BIENVENIDOS-->
-  <div style="width:1280px; height:350px; overflow:hidden;"><iframe width="1280" height="350" scrolling="no" frameborder="0" src="main/bienvenido.html"></iframe></div>
+  <div style="width:1280px; height:350px; overflow:hidden;">
+      <iframe width="1280" height="350" scrolling="no" frameborder="0" src="main/bienvenido.html"></iframe>
+  </div>
   <p style="clear:both;">&nbsp;</p>
   <!--EN VIVO-->
 <!--EVENTOS SLIDER-->

@@ -1,4 +1,101 @@
+/* Contador de la proxima transmisión */
+@media(min-width: 360px) and (max-width: 740px){
+    #livestream #livestream-bar {
+        width: 100%;
+        height: 60px;
+    }
 
+    #countdown-bar {
+        display: none;
+    }
+
+    #countdown-bar2 {
+        background: rgba(203, 203, 203, 1.0);
+        width: 100%;
+        height: 40px;
+        padding: 8px 5px;
+        text-align: center;
+    }
+
+    .elements {
+        display: inline-block;
+        margin-left: 2%;
+    }
+
+    #countdown-bar2 #aa2 {
+        display: none;
+    }
+
+    #countdown-bar2 #transmition2 {
+        width: 173.19px;
+    }
+
+    #countdown-bar2 #counter2 {
+        width: 259.8px;
+    }
+
+    #countdown-bar2 #youtube2 {
+        width: 47.8px;
+    }
+
+    #countdown-bar2 #livestreamicon2 {
+        width: 110.39px;
+    }
+
+    .elements p {
+        margin: 0;
+    }
+}
+
+@media(min-width: 320px) and (max-width: 360px){
+    #livestream #livestream-bar {
+        width: 100%;
+        height: 80px;
+    }
+
+    #countdown-bar {
+        display: none;
+    }
+
+    #countdown-bar2 {
+        background: rgba(203, 203, 203, 1.0);
+        width: 100%;
+        height: 60px;
+        padding: 8px 5px;
+        text-align: center;
+    }
+
+    .elements {
+        display: inline-block;
+        margin-left: 2%;
+    }
+
+    #countdown-bar2 #aa2 {
+        width: 122px;
+    }
+
+    #countdown-bar2 #transmition2 {
+        width: 173.19px;
+    }
+
+    #countdown-bar2 #counter2 {
+        width: 259.8px;
+    }
+
+    #countdown-bar2 #youtube2 {
+        width: 47.8px;
+    }
+
+    #countdown-bar2 #livestreamicon2 {
+        width: 110.39px;
+    }
+
+    .elements p {
+        margin: 0;
+    }
+}
+
+/*Menu Pantallas medianas*/
 @media(min-width: 655px) and (max-width: 970px){
     #menu {
         text-align: center;
@@ -16,8 +113,15 @@
     #menu select, #menu button {
         display: none;
     }
+
+    #main-menu {
+        width:100%;
+        height:200px
+    }
+
 }
 
+/*Menú pantallas pequeñas*/
 @media (min-width: 320px) and (max-width: 655px){
     #menu {
         text-align: center;
@@ -25,6 +129,11 @@
 
     #menu #nav-bar {
         display: none;
+    }
+
+    #main-menu {
+        width:100%;
+        height:200px
     }
 
     select {

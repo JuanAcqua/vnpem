@@ -3,42 +3,87 @@
 <head>
 <meta charset="UTF-8">
 <title>Documento sin título</title>
-<link href="../css/countdown.css" rel="stylesheet" type="text/css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<script src="../scripts/countdown/jquery.countdown.js"></script>
-<style type="text/css">
-body {
-	margin:0;
-}
-@font-face {
-	font-family:Trajan Pro;
-	src:url(../css/fonts/trajan_pro/TrajanPro-Regular.ttf);
-}
-@font-face {
-	font-family:Helvetica Neue Light;
-	src:url(../css/fonts/helvetica_neue/HelveticaNeue-Light.ttf);
-}
-@font-face {
-	font-family:BankGothicBT Light;
-	src:url(../css/fonts/BankGothicBT_Light/BankGothicBT_Light.ttf),
-	    url(../css/fonts/BankGothicBT_Light/BankGothicBT_Light.woff),
-		url(../css/fonts/BankGothicBT_Light/BankGothicBT_Light.svg);
-}
-p {
-	font:0.875em 'Helvetica Neue Light';
-	color:rgba(105,104,105,1.00);
-}
-</style>
+	<link href="../css/countdown.css" rel="stylesheet" type="text/css">
+	<link href="../css/main.css" rel="stylesheet" type="text/css">
+	<link href="../css/responsive.css" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="../scripts/countdown/jquery.countdown.js"></script>
+	<style type="text/css">
+	body {
+		margin:0;
+	}
+	@font-face {
+		font-family:Trajan Pro;
+		src:url(../css/fonts/trajan_pro/TrajanPro-Regular.ttf);
+	}
+	@font-face {
+		font-family:Helvetica Neue Light;
+		src:url(../css/fonts/helvetica_neue/HelveticaNeue-Light.ttf);
+	}
+	@font-face {
+		font-family:BankGothicBT Light;
+		src:url(../css/fonts/BankGothicBT_Light/BankGothicBT_Light.ttf),
+			url(../css/fonts/BankGothicBT_Light/BankGothicBT_Light.woff),
+			url(../css/fonts/BankGothicBT_Light/BankGothicBT_Light.svg);
+	}
+	p {
+		font:0.875em 'Helvetica Neue Light';
+		color:rgba(105,104,105,1.00);
+	}
+	</style>
+	<meta name="viewport" content="width=device-width, initial-sclae=1.0">
 </head>
 
 <body>
-  <div style="background:rgba(203,203,203,1.0); width:1240px; height:20px; padding:8px 20px;">
-    <div style="position:absolute; left:430px;"><p style="margin:0;">Pr&oacute;xima transmisi&oacute;n en vivo:</p></div>
-    <div style="position:absolute; left:623px;"><img src="../aam/aam.png" width="33" height="19" alt=""/></div>
-    <div style="position:absolute; left:670px;"><p id="getting-started" style="margin:0;"></p></div>
-    <div style="position:absolute; left:955px;"><a href="https://www.youtube.com/watch?v=VlxekXlhpnQ" target="_blank"><img src="countdown/youtube.svg" alt="YouTube" height="20" onerror="this.onerror=null; this.src='countdown/youtube.png'"/></a></div>
-    <div style="position:absolute; left:1050px;"><a href="https://livestream.com/ArmandoAlducin/eljuiciofinal" target="_blank"><img src="countdown/livestream.svg" alt="livestream" height="19" onerror="this.onerror=null; this.src='countdown/livestream.png'"/></a></div>
-  </div>
+	<div id="countdown-bar">
+		<div class="elements" id="transmition">
+			<p>Pr&oacute;xima transmisi&oacute;n en vivo:</p>
+		</div>
+		<div class="elements" id="aa">
+			<img src="../aam/aam.png" width="33" height="19" alt=""/>
+		</div>
+		<div class="elements" id="counter">
+			<p id="getting-started"></p>
+		</div>
+		<div class="elements" id="youtube">
+			<a href="https://www.youtube.com/watch?v=VlxekXlhpnQ" target="_blank">
+				<img src="countdown/youtube.svg" alt="YouTube"
+					 height="20" onerror="this.onerror=null; this.src='countdown/youtube.png'"/>
+			</a>
+		</div>
+		<div class="elements" id="livestreamicon">
+			<a href="https://livestream.com/ArmandoAlducin/eljuiciofinal" target="_blank">
+				<img src="countdown/livestream.svg" alt="livestream" height="19" onerror="this.onerror=null;
+				 this.src='countdown/livestream.png'"/>
+			</a>
+		</div>
+	</div>
+
+	<div id="countdown-bar2">
+		<div class="elements" id="transmition2">
+			<p>Pr&oacute;xima transmisi&oacute;n en vivo:</p>
+		</div>
+		<div class="elements" id="aa2">
+
+		</div>
+		<div class="elements" id="youtube2">
+			<a href="https://www.youtube.com/watch?v=VlxekXlhpnQ" target="_blank">
+				<img src="countdown/youtube.svg" alt="YouTube"
+					 height="20" onerror="this.onerror=null; this.src='countdown/youtube.png'"/>
+			</a>
+		</div>
+		<div class="elements" id="livestreamicon2">
+			<a href="https://livestream.com/ArmandoAlducin/eljuiciofinal" target="_blank">
+				<img src="countdown/livestream.svg" alt="livestream" height="19" onerror="this.onerror=null;
+				 this.src='countdown/livestream.png'"/>
+			</a>
+		</div>
+		<div class="elements" id="counter2">
+			<p id="getting-started2"></p>
+		</div>
+
+	</div>
+
 </body>
 <script type="text/javascript">
   $("#getting-started")
@@ -47,5 +92,12 @@ p {
 	  event.strftime('%D días, %H horas %M minutos %S segundos')
 	  );
   });
+
+  $("#getting-started2")
+		  .countdown("2016/05/28 10:30:00", function(event) {
+			  $(this).text(
+					  event.strftime('%D días, %H horas %M minutos %S segundos')
+			  );
+		  });
 </script>
 </html>

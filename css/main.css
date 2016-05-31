@@ -19,7 +19,7 @@ body {
 }
 #contenedor {
 	position:relative;
-	width:1280px;
+	width:100%;
 	height:auto;
 	margin:auto;
 }
@@ -112,6 +112,61 @@ li {
 	background-size: cover;
 }
 
+/* Contador de la proxima transmisión */
+
+
+#livestream {
+	overflow:hidden;
+}
+
+/*En pantallas grandes*/
+
+@media screen and (min-width: 740px) {
+	#livestream #livestream-bar {
+		width: 100%;
+		height: 36px;
+	}
+
+	#countdown-bar {
+		background: rgba(203, 203, 203, 1.0);
+		width: 100%;
+		height: 20px;
+		padding: 8px 20px;
+	}
+
+	.elements {
+		display: inline-block;
+		margin-left: 2%;
+	}
+
+	#countdown-bar #transmition {
+		width: 173.19px;
+	}
+
+	#countdown-bar #aa {
+		width: 33px;
+	}
+
+	#countdown-bar #counter {
+		width: 259.8px;
+	}
+
+	#countdown-bar #youtube {
+		width: 47.8px;
+	}
+
+	#countdown-bar #livestreamicon {
+		width: 110.39px;
+	}
+
+	.elements p {
+		margin: 0;
+	}
+
+	#countdown-bar2{
+		display: none;
+	}
+}
 /* Menú */
 
 #menu img {
@@ -145,5 +200,10 @@ li {
 
 	#menu select {
 		display: none;
+	}
+
+	#main-menu {
+		width:100%;
+		height:140px
 	}
 }
