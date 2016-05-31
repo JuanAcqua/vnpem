@@ -5,17 +5,17 @@ body {
 }
 @font-face {
 	font-family:Trajan Pro;
-	src:url(/css/fonts/trajan_pro/TrajanPro-Regular.ttf);
+	src:url(fonts/trajan_pro/TrajanPro-Regular.ttf);
 }
 @font-face {
 	font-family:Helvetica Neue Light;
-	src:url(/css/fonts/helvetica_neue/HelveticaNeue-Light.ttf);
+	src:url(fonts/helvetica_neue/HelveticaNeue-Light.ttf);
 }
 @font-face {
 	font-family:BankGothicBT Light;
-	src:url(/css/fonts/BankGothicBT_Light/BankGothicBT_Light.ttf),
-	    url(/css/fonts/BankGothicBT_Light/BankGothicBT_Light.woff),
-		url(/css/fonts/BankGothicBT_Light/BankGothicBT_Light.svg);
+	src:url(fonts/BankGothicBT_Light/BankGothicBT_Light.ttf),
+	    url(fonts/BankGothicBT_Light/BankGothicBT_Light.woff),
+		url(fonts/BankGothicBT_Light/BankGothicBT_Light.svg);
 }
 #contenedor {
 	position:relative;
@@ -110,4 +110,40 @@ li {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+}
+
+/* Menú */
+
+#menu img {
+	width: 199px;
+	height: 120px;
+}
+
+
+/* En pantallas grandes */
+@media screen and (min-width: 970px) {
+
+	#logo {
+		float: left;
+		text-align: left;
+		width: 15%;
+		margin-left: 5%;
+	}
+
+	#menu #nav-bar {
+		float: right;
+		text-align: right;
+		width: 70%;
+		margin-top: 60px;
+		margin-right: 3%;
+	}
+
+	#menu .nav {
+		float: right;
+		margin: 0px 20px 0 20px;
+	}
+
+	#menu select {
+		display: none;
+	}
 }

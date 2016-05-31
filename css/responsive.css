@@ -1,0 +1,35 @@
+
+@media(min-width: 655px) and (max-width: 970px){
+    #menu {
+        text-align: center;
+    }
+
+    #menu #nav-bar {
+        padding: 0;
+    }
+
+    #menu #nav-bar .nav {
+        display: inline-block;
+        margin-left: 5%;
+    }
+
+    #menu select, #menu button {
+        display: none;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 655px){
+    #menu {
+        text-align: center;
+    }
+
+    #menu #nav-bar {
+        display: none;
+    }
+
+    select {
+        width: 95%;
+        margin: 11px  0 11px 0%;
+        text-align: center;
+    }
+}
