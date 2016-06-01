@@ -28,16 +28,16 @@
 
     <iframe id="main-menu" scrolling="no" frameborder="0" src="main/menu.html"></iframe>
 
-  <div style="width:1280px; height:36px;"><iframe width="1280" height="36" scrolling="no" frameborder="0" src="main/social_networks.html"></iframe></div>
+  <iframe id="social-network-bar" scrolling="no" frameborder="0" src="main/social_networks.html"></iframe>
   <!--BIENVENIDOS-->
-  <div style="width:1280px; height:350px; overflow:hidden;">
-      <iframe width="1280" height="350" scrolling="no" frameborder="0" src="main/bienvenido.html"></iframe>
+  <div id="welcome">
+      <iframe id="welcome-frame" scrolling="no" frameborder="0" src="main/bienvenido.html"></iframe>
   </div>
   <p style="clear:both;">&nbsp;</p>
   <!--EN VIVO-->
 <!--EVENTOS SLIDER-->
-  <a name="Eventos"></a><div style="background:rgba(203,203,203,1.00); padding:10px;"><h1 style="font-size:20px; margin:0; color:rgba(105,104,105,1.00);">EVENTOS</h1></div>
-  <div id="myRotator" class="banner-rotator" style="margin-bottom:10px; width:1280px; height:350px;">
+  <div id="events"><h1>EVENTOS</h1></div>
+  <div id="myRotator" class="banner-rotator">
     <ul class="slides">
         <li data-effect="random"> 
             <a href="eventos/#Acapulco"><img src="eventos/2016/juicio_1280px.jpg" alt="El juicio final"/></a>
@@ -180,37 +180,44 @@
     </div>
   <p style="clear:both;">&nbsp;</p>
 <!--APP-->
-  <a name="Media"></a><div style="background:rgba(203,203,203,1.00); padding:10px;"><h1 style="font-size:20px; margin:0; color:rgba(105,104,105,1.00);">App</h1></div>
-  <div style="height:250px;">
-    <div style="width:372px; float:left;"><img src="app/images/app_screen.png" width="372" height="249" alt=""/></div>
-	<div style="width:420px; float:left; margin:0 22px;">
-      <p style="text-align:center">Con <strong>VNPEM App</strong> siempre estarás informado:<br>
-      <em>&#8220;Transmisiones en vivo, video y audio conferencias, devocional diario, información de eventos y más.&#8221;</em><br>Conoce su nueva imagen y ¡utilízala ya!</p>
-      <p>&nbsp;</p>
-      <p style="text-align:center;"><a href="https://itunes.apple.com/us/app/vida-nueva-para-el-mundo/id935525323?mt=8&uo=4" target="_blank"><img src="app/images/apple.svg" alt="" width="150" style="margin:0 20px;"/></a>
-      <a href="https://play.google.com/store/apps/details?id=com.subsplash.thechurchapp.s_2B67BG#" target="_blank"><img src="app/images/google.png" alt="" width="150" style="margin:0 20px;"/></a></p>
-      <p style="text-align:center;"><a href="http://www.windowsphone.com/s?appid=ad71a5ca-538c-4efd-acf5-4489c2322b27" target="_blank"><img src="app/images/microsoft.png" alt="" width="150" style="margin:0 20px;"/></a>
-      <a href="http://www.amazon.com/gp/mas/dl/android?p=com.subsplash.thechurchapp.s_2B67BG" target="_blank"><img src="app/images/amazon.svg" alt="" width="150" style="margin:0 20px;"/></a></p>
-    </div>
-	<div id="cmn-video-demo3__container">
-  <video width="1280" height="720" id="cmn-video-demo3__video" poster="app/video/app.jpg" muted autoplay loop >
-    <source src="app/video/app.mp4" type="video/mp4">
-    <source src="app/video/app.ogv" type="video/ogg">
-    <source src="app/video/app.webm" type="video/webm">
-    <iframe src="https://player.vimeo.com/video/164755641?title=0&byline=0&portrait=0" width="444" height="250" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-  </video>
-  <div id="cmn-video-demo3__content">
-    <div id="cmn-video-demo3__controls">
-    <button id="cmn-video-demo3__controls--playback">Pausa</button>
-        <button id="cmn-video-demo3__controls--mute">Sonido</button>
-      </div>
-</div>
-</div>
+    <div style="background:rgba(203,203,203,1.00); padding:10px;"><h1 style="font-size:20px; margin:0; color:rgba(105,104,105,1.00);">App</h1></div>
+    <div id="app" style="">
+        <div style="width:372px; float:left;"><img src="app/images/app_screen.png" width="372" height="249" alt=""/></div>
+	    <div style="width:420px; float:left; margin:0 22px;">
+            <p style="text-align:center">Con <strong>VNPEM App</strong> siempre estarás informado:<br>
+            <em>&#8220;Transmisiones en vivo, video y audio conferencias, devocional diario, información de eventos y más.&#8221;</em><br>Conoce su nueva imagen y ¡utilízala ya!</p>
+            <p>&nbsp;</p>
+            <p style="text-align:center;">
+                <a href="https://itunes.apple.com/us/app/vida-nueva-para-el-mundo/id935525323?mt=8&uo=4" target="_blank">
+                    <img src="app/images/apple.svg" alt="" width="150" style="margin:0 20px;"/>
+                </a>
+        <a href="https://play.google.com/store/apps/details?id=com.subsplash.thechurchapp.s_2B67BG#" target="_blank"><img src="app/images/google.png" alt="" width="150" style="margin:0 20px;"/></a></p>
+        <p style="text-align:center;"><a href="http://www.windowsphone.com/s?appid=ad71a5ca-538c-4efd-acf5-4489c2322b27" target="_blank"><img src="app/images/microsoft.png" alt="" width="150" style="margin:0 20px;"/></a>
+        <a href="http://www.amazon.com/gp/mas/dl/android?p=com.subsplash.thechurchapp.s_2B67BG" target="_blank"><img src="app/images/amazon.svg" alt="" width="150" style="margin:0 20px;"/></a></p>
+        </div>
+        <div id="cmn-video-demo3__container">
+            <video width="1280" height="720" id="cmn-video-demo3__video" poster="app/video/app.jpg" muted autoplay loop >
+                <source src="app/video/app.mp4" type="video/mp4">
+                <source src="app/video/app.ogv" type="video/ogg">
+                <source src="app/video/app.webm" type="video/webm">
+                <iframe src="https://player.vimeo.com/video/164755641?title=0&byline=0&portrait=0" width="444" height="250" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </video>
+            <div id="cmn-video-demo3__content">
+                <div id="cmn-video-demo3__controls">
+                    <button id="cmn-video-demo3__controls--playback">Pausa</button>
+                    <button id="cmn-video-demo3__controls--mute">Sonido</button>
+                </div>
+            </div>
+        </div>
   </div>
+
+    <!-- App responsivo -->
+    <img id="armando-image" src="aam.jpg" />
+
   <script src="app/scripts/mute.js"></script>
   <p style="clear:both;">&nbsp;</p>
   <!--AAM-->
-  <div class="px" data-parallax="scroll" data-image-src="aam/back.jpg" data-speed="0.4">
+  <div class="px" id="armando" data-parallax="scroll" data-image-src="aam/back.jpg" data-speed="0.4">
 	<div style="position: absolute; top: 30px; left: 200px;"><a href="https://www.armandoalducin.net" target="_blank"><img src="aam/aam.png" width="325" height="180" alt=""/></a></div>
     <div style="position: absolute; top: 220px; left: 120px;"><p style="font:28px 'BankGothicBT Light'; color:rgba(254,254,254,1.00)">APASIONADOS POR LA VERDAD</p></div>
     <div style="position: absolute; top:7px; left:970px;"><img src="aam/armando.png" width="310" height="291" alt=""/></div>
@@ -383,7 +390,11 @@
   <p>&nbsp;</p>
 <!--SOCIAL-->
 
-  <div style="width:1280px; height:500px; overflow:hidden;"><iframe width="1280" height="500" scrolling="no" frameborder="0" src="mapa_web/index.html"></iframe></div>
+  <div id="footer" >
+      <iframe width="1280" height="500" scrolling="no" frameborder="0" src="mapa_web/index.html">
+
+      </iframe>
+  </div>
   <!-- Load Facebook SDK for JavaScript -->
 <div id="fb-root"></div>
 <script>(function(d, s, id) {

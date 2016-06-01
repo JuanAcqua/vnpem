@@ -119,6 +119,36 @@
         height:200px
     }
 
+    /*Quitamos la bienvenida*/
+    #welcome {
+        display: none;
+    }
+
+    /*Quitamos los eventos*/
+    #myRotator {
+        display: none;
+    }
+
+    /*Quitamos la sección de la app*/
+    #app{
+        display: none;
+    }
+
+    /*Quitamos a Armando*/
+    #armando {
+        display: none;
+    }
+
+    /*Ponemos la imagen pequeña se armando*/
+    #armando-image {
+        text-align: center;
+        width: 90%;
+        height: 90%;
+    }
+
+    #footer {
+        display: none;
+    }
 }
 
 /*Menú pantallas pequeñas*/
@@ -140,5 +170,36 @@
         width: 95%;
         margin: 11px  0 11px 0%;
         text-align: center;
+    }
+
+    /*Quitamos la bienvenida*/
+    #welcome {
+        display: none;
+    }
+
+    /*Quitamos los eventos*/
+    #myRotator {
+        display: none;
+    }
+
+    /*Quitamos la sección de la app*/
+    #app{
+        display: none;
+    }
+
+    /*Quitamos a Armando*/
+    #armando {
+        display: none;
+    }
+
+    /*Ponemos la imagen pequeña se armando*/
+    #armando-image {
+        text-align: center;
+        width: 90%;
+        height: 90%;
+    }
+
+    #footer {
+        display: none;
     }
 }
