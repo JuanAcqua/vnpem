@@ -210,6 +210,11 @@ li {
 	#armando-image {
 		display: none;
 	}
+
+	/*quitamos la imagen responsiva de la app*/
+	#app-image {
+		display: none;
+	}
 }
 
 /* Social networks */
@@ -284,6 +289,13 @@ li {
 
 #app {
 	height:250px;
+}
+
+/*Ubicaciones*/
+.location {
+	width: 302px;
+	float: left;
+	margin-left: 1%;
 }
 
 /*Footer*/

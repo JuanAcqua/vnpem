@@ -93,6 +93,7 @@
     .elements p {
         margin: 0;
     }
+
 }
 
 /*Menu Pantallas medianas*/
@@ -139,10 +140,17 @@
         display: none;
     }
 
-    /*Ponemos la imagen pequeña se armando*/
+    /*Ponemos la imagen pequeña de armando*/
     #armando-image {
         text-align: center;
-        width: 90%;
+        width: 100%;
+        height: 90%;
+    }
+
+    /*Ponemos la imagen pequeña de la app*/
+    #app-image {
+        text-align: center;
+        width: 100%;
         height: 90%;
     }
 
@@ -192,14 +200,53 @@
         display: none;
     }
 
-    /*Ponemos la imagen pequeña se armando*/
+    /*Ponemos la imagen pequeña de armando*/
     #armando-image {
         text-align: center;
-        width: 90%;
+        width: 100%;
         height: 90%;
     }
+
+    #app-image {
+        text-align: center;
+        width: 100%;
+        height: 90%;
+    }
+
+
 
     #footer {
         display: none;
     }
+}
+
+/*Ubicaciones*/
+
+
+@media (min-width: 620px) and (max-width: 950px) {
+
+    #locations-wrapper {
+        width: 100%;
+    }
+
+    .location {
+        width: 302px;
+        margin: auto;
+        float: left;
+    }
+
+}
+
+@media (min-width: 320px) and (max-width: 620px) {
+
+    #locations-wrapper {
+        width: 100%;
+    }
+
+    .location {
+        width: 302px;
+        margin: auto;
+        float: left;
+    }
+
 }
