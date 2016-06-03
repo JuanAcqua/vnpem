@@ -6,8 +6,6 @@
  */
 $('document').ready(function () {
 
-
-
     // cache vars
     var cmn_video = document.getElementById("cmn-video-demo3__video"),
         cmn_playback = document.getElementById("cmn-video-demo3__controls--playback"),
@@ -38,22 +36,14 @@ $('document').ready(function () {
     } );
 
     //Poner play en position del screen
-    /*$(window).scroll(function() {
-      $('video').each(function () {
+    
+    $(window).scroll(function() {
+      $('video').each(function(){
         if ($(this).is(":in-viewport")) {
           $(this)[0].play();
         } else {
           $(this)[0].pause();
         }
-      });
-    });*/
-  $(window).scroll(function() {
-    $('video').each(function(){
-      if ($(this).is(":in-viewport")) {
-        $(this)[0].play();
-      } else {
-        $(this)[0].pause();
-      }
-    })
-  });
+      })
+    });
 });
