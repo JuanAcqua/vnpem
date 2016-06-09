@@ -1,5 +1,9 @@
 var $select = $("<select></select>");
 $("#menu").append($select);
+var $homeOption = $("<option></option>");
+$homeOption.val("/");
+$homeOption.text("Home");
+$select.append($homeOption);
 
 $("#menu a").each(function(){
     var $anchor = $(this);
@@ -17,5 +21,5 @@ $("#menu a").each(function(){
 });
 
 $select.change(function(){
-    window.location = $select.val();
+    window.parent.location = $select.val();
 });

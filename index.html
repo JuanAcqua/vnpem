@@ -221,11 +221,15 @@
 
   <script src="app/scripts/mute.js"></script>
   <p style="clear:both;">&nbsp;</p>
-  <!--AAM-->
-  <div class="px" id="armando" data-parallax="scroll" data-image-src="aam/back.jpg" data-speed="0.4">
-	<div style="position: absolute; top: 30px; left: 200px;"><a href="https://www.armandoalducin.net" target="_blank"><img src="aam/aam.png" width="325" height="180" alt=""/></a></div>
-    <div style="position: absolute; top: 220px; left: 120px;"><p style="font:28px 'BankGothicBT Light'; color:rgba(254,254,254,1.00)">APASIONADOS POR LA VERDAD</p></div>
-    <div style="position: absolute; top:7px; left:970px;"><img src="aam/armando.png" width="310" height="291" alt=""/></div>
+  <!--AAM--><!---->
+  <div id="armando">
+      <div id="block-logo">
+	    <a href="https://www.armandoalducin.net" target="_blank">
+            <img id="aam-image" src="aam/aam.png" width="325" height="180" alt=""/>
+        </a>
+        <p  id="aam-font" style="font:28px 'BankGothicBT Light'; color:rgba(254,254,254,1.00)">APASIONADOS POR LA VERDAD</p>
+      </div>
+    <img id="aam-armandito" src="aam/armando.png" width="310" height="291" alt=""/>
   </div>
   <p>&nbsp;</p>
 
@@ -436,4 +440,5 @@ $(window).load(function() {
 });
 </script>
 <script src="js/effects/app.js"></script>
+<script src="js/effects/parallax.js"></script>
 </html>
